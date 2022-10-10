@@ -1,0 +1,10 @@
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\bin\Debug\MiniGames.exe.config
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\bin\Debug\MiniGames.exe
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\bin\Debug\MiniGames.pdb
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.csproj.AssemblyReference.cache
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.Properties.Resources.resources
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.csproj.GenerateResource.cache
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.csproj.CoreCompileInputs.cache
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.exe
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.pdb
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.Form1.resources
