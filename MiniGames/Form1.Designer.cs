@@ -51,7 +51,7 @@
             this.menuTitle.Name = "menuTitle";
             this.menuTitle.Size = new System.Drawing.Size(808, 157);
             this.menuTitle.TabIndex = 0;
-            this.menuTitle.Text = "funniest mini games";
+            this.menuTitle.Text = "funniest mini games ever";
             this.menuTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gameTitle1
@@ -59,40 +59,56 @@
             this.gameTitle1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameTitle1.ForeColor = System.Drawing.Color.Ivory;
             this.gameTitle1.Location = new System.Drawing.Point(21, 248);
+            this.gameTitle1.Margin = new System.Windows.Forms.Padding(0);
             this.gameTitle1.Name = "gameTitle1";
-            this.gameTitle1.Size = new System.Drawing.Size(91, 33);
+            this.gameTitle1.Size = new System.Drawing.Size(84, 33);
             this.gameTitle1.TabIndex = 1;
             this.gameTitle1.Text = "PONG";
+            this.gameTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle1.MouseEnter += new System.EventHandler(this.gameTitle1_MouseEnter);
+            this.gameTitle1.MouseLeave += new System.EventHandler(this.gameTitle1_MouseLeave);
             // 
             // gameTitle2
             // 
             this.gameTitle2.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameTitle2.ForeColor = System.Drawing.Color.Ivory;
             this.gameTitle2.Location = new System.Drawing.Point(178, 248);
+            this.gameTitle2.Margin = new System.Windows.Forms.Padding(0);
             this.gameTitle2.Name = "gameTitle2";
             this.gameTitle2.Size = new System.Drawing.Size(182, 33);
             this.gameTitle2.TabIndex = 2;
             this.gameTitle2.Text = "PLATFORMER";
+            this.gameTitle2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle2.MouseEnter += new System.EventHandler(this.gameTitle2_MouseEnter);
+            this.gameTitle2.MouseLeave += new System.EventHandler(this.gameTitle2_MouseLeave);
             // 
             // gameTitle3
             // 
             this.gameTitle3.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameTitle3.ForeColor = System.Drawing.Color.Ivory;
             this.gameTitle3.Location = new System.Drawing.Point(421, 248);
+            this.gameTitle3.Margin = new System.Windows.Forms.Padding(0);
             this.gameTitle3.Name = "gameTitle3";
             this.gameTitle3.Size = new System.Drawing.Size(213, 33);
             this.gameTitle3.TabIndex = 3;
             this.gameTitle3.Text = "BRICK BREAKER";
+            this.gameTitle3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle3.MouseEnter += new System.EventHandler(this.gameTitle3_MouseEnter);
+            this.gameTitle3.MouseLeave += new System.EventHandler(this.gameTitle3_MouseLeave);
             // 
             // gameTitle4
             // 
             this.gameTitle4.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameTitle4.ForeColor = System.Drawing.Color.Ivory;
             this.gameTitle4.Location = new System.Drawing.Point(693, 248);
+            this.gameTitle4.Margin = new System.Windows.Forms.Padding(0);
             this.gameTitle4.Name = "gameTitle4";
             this.gameTitle4.Size = new System.Drawing.Size(124, 33);
             this.gameTitle4.TabIndex = 4;
             this.gameTitle4.Text = "PAC MAN";
+            this.gameTitle4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle4.MouseEnter += new System.EventHandler(this.gameTitle4_MouseEnter);
+            this.gameTitle4.MouseLeave += new System.EventHandler(this.gameTitle4_MouseLeave);
             // 
             // gameTitle8
             // 
@@ -100,63 +116,85 @@
             this.gameTitle8.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameTitle8.ForeColor = System.Drawing.Color.Ivory;
             this.gameTitle8.Location = new System.Drawing.Point(693, 345);
+            this.gameTitle8.Margin = new System.Windows.Forms.Padding(0);
             this.gameTitle8.MinimumSize = new System.Drawing.Size(100, 32);
             this.gameTitle8.Name = "gameTitle8";
             this.gameTitle8.Size = new System.Drawing.Size(100, 32);
             this.gameTitle8.TabIndex = 5;
             this.gameTitle8.Text = "SNAKE";
+            this.gameTitle8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle8.MouseEnter += new System.EventHandler(this.gameTitle8_MouseEnter);
+            this.gameTitle8.MouseLeave += new System.EventHandler(this.gameTitle8_MouseLeave);
             // 
             // gameTitle5
             // 
             this.gameTitle5.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameTitle5.ForeColor = System.Drawing.Color.Ivory;
             this.gameTitle5.Location = new System.Drawing.Point(21, 345);
+            this.gameTitle5.Margin = new System.Windows.Forms.Padding(0);
             this.gameTitle5.Name = "gameTitle5";
             this.gameTitle5.Size = new System.Drawing.Size(109, 32);
             this.gameTitle5.TabIndex = 6;
             this.gameTitle5.Text = "BASKET";
+            this.gameTitle5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle5.MouseEnter += new System.EventHandler(this.gameTitle5_MouseEnter);
+            this.gameTitle5.MouseLeave += new System.EventHandler(this.gameTitle5_MouseLeave);
             // 
             // gameTitle6
             // 
             this.gameTitle6.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameTitle6.ForeColor = System.Drawing.Color.Ivory;
             this.gameTitle6.Location = new System.Drawing.Point(178, 345);
+            this.gameTitle6.Margin = new System.Windows.Forms.Padding(0);
             this.gameTitle6.Name = "gameTitle6";
             this.gameTitle6.Size = new System.Drawing.Size(182, 32);
             this.gameTitle6.TabIndex = 7;
             this.gameTitle6.Text = "FLAPPY BIRD";
+            this.gameTitle6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle6.MouseEnter += new System.EventHandler(this.gameTitle6_MouseEnter);
+            this.gameTitle6.MouseLeave += new System.EventHandler(this.gameTitle6_MouseLeave);
             // 
             // gameTitle7
             // 
             this.gameTitle7.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameTitle7.ForeColor = System.Drawing.Color.Ivory;
             this.gameTitle7.Location = new System.Drawing.Point(421, 345);
+            this.gameTitle7.Margin = new System.Windows.Forms.Padding(0);
             this.gameTitle7.Name = "gameTitle7";
-            this.gameTitle7.Size = new System.Drawing.Size(231, 32);
+            this.gameTitle7.Size = new System.Drawing.Size(226, 32);
             this.gameTitle7.TabIndex = 8;
             this.gameTitle7.Text = "SPACE INVADERS";
+            this.gameTitle7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle7.MouseEnter += new System.EventHandler(this.gameTitle7_MouseEnter);
+            this.gameTitle7.MouseLeave += new System.EventHandler(this.gameTitle7_MouseLeave);
             // 
             // helpBtn
             // 
             this.helpBtn.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpBtn.ForeColor = System.Drawing.Color.Ivory;
-            this.helpBtn.Location = new System.Drawing.Point(368, 486);
+            this.helpBtn.Location = new System.Drawing.Point(386, 487);
+            this.helpBtn.Margin = new System.Windows.Forms.Padding(0);
             this.helpBtn.Name = "helpBtn";
-            this.helpBtn.Size = new System.Drawing.Size(92, 43);
+            this.helpBtn.Size = new System.Drawing.Size(77, 43);
             this.helpBtn.TabIndex = 9;
             this.helpBtn.Text = "HELP";
             this.helpBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.helpBtn.MouseEnter += new System.EventHandler(this.helpBtn_MouseEnter);
+            this.helpBtn.MouseLeave += new System.EventHandler(this.helpBtn_MouseLeave);
             // 
             // exitBtn
             // 
             this.exitBtn.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.Color.Ivory;
-            this.exitBtn.Location = new System.Drawing.Point(368, 529);
+            this.exitBtn.Location = new System.Drawing.Point(386, 530);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(92, 43);
+            this.exitBtn.Size = new System.Drawing.Size(77, 43);
             this.exitBtn.TabIndex = 10;
             this.exitBtn.Text = "EXIT";
             this.exitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.exitBtn.MouseEnter += new System.EventHandler(this.exitBtn_MouseEnter);
+            this.exitBtn.MouseLeave += new System.EventHandler(this.exitBtn_MouseLeave);
             // 
             // Form1
             // 
@@ -179,8 +217,8 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The Rat Games";
-            this.Load += new System.EventHandler(this.MiniGamesForm_Load);
-            this.Resize += new System.EventHandler(this.MiniGamesForm_Resize);
+            this.Load += new System.EventHandler(this.GamesMenu_Load);
+            this.Resize += new System.EventHandler(this.GamesMenu_Resize);
             this.ResumeLayout(false);
         }
 

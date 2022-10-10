@@ -31,7 +31,7 @@ namespace MiniGames
             InitializeComponent();
         }
 
-        private void MiniGamesForm_Load(object sender, EventArgs e)
+        private void GamesMenu_Load(object sender, EventArgs e)
         {
             OriginalFormSize = this.Size;
             HelpRectangle = new Rectangle(helpBtn.Location.X, helpBtn.Location.Y, helpBtn.Width, helpBtn.Height);
@@ -48,7 +48,7 @@ namespace MiniGames
             GameTitle8Rectangle = new Rectangle(gameTitle8.Location.X, gameTitle8.Location.Y, gameTitle8.Width, gameTitle8.Height);
         }
         
-        private void MiniGamesForm_Resize(object sender, EventArgs e)
+        private void GamesMenu_Resize(object sender, EventArgs e)
         {
             ResizeButtons(HelpRectangle, helpBtn);
             ResizeButtons(ExitRectangle, exitBtn);
@@ -77,6 +77,107 @@ namespace MiniGames
             
             control.Location = new Point(newXPosition, newYPosition);
             control.Size = new Size(newWidth, newHeight);
+        }
+
+        private void gameTitle1_MouseEnter(object sender, EventArgs e)
+        {
+            gameTitle1.BackColor = Color.Ivory;
+            gameTitle1.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void gameTitle1_MouseLeave(object sender, EventArgs e)
+        {
+            gameTitle1.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            gameTitle1.ForeColor = Color.Ivory;
+        }
+        private void gameTitle2_MouseEnter(object sender, EventArgs e)
+        {
+            gameTitle2.BackColor = Color.Ivory;
+            gameTitle2.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void gameTitle2_MouseLeave(object sender, EventArgs e)
+        {
+            gameTitle2.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            gameTitle2.ForeColor = Color.Ivory;
+        }
+        private void gameTitle3_MouseEnter(object sender, EventArgs e)
+        {
+            gameTitle3.BackColor = Color.Ivory;
+            gameTitle3.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void gameTitle3_MouseLeave(object sender, EventArgs e)
+        {
+            gameTitle3.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            gameTitle3.ForeColor = Color.Ivory;
+        }
+        private void gameTitle4_MouseEnter(object sender, EventArgs e)
+        {
+            gameTitle4.BackColor = Color.Ivory;
+            gameTitle4.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void gameTitle4_MouseLeave(object sender, EventArgs e)
+        {
+            gameTitle4.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            gameTitle4.ForeColor = Color.Ivory;
+        }
+        private void gameTitle5_MouseEnter(object sender, EventArgs e)
+        {
+            gameTitle5.BackColor = Color.Ivory;
+            gameTitle5.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void gameTitle5_MouseLeave(object sender, EventArgs e)
+        {
+            gameTitle5.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            gameTitle5.ForeColor = Color.Ivory;
+        }
+        private void gameTitle6_MouseEnter(object sender, EventArgs e)
+        {
+            gameTitle6.BackColor = Color.Ivory;
+            gameTitle6.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void gameTitle6_MouseLeave(object sender, EventArgs e)
+        {
+            gameTitle6.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            gameTitle6.ForeColor = Color.Ivory;
+        }
+        private void gameTitle7_MouseEnter(object sender, EventArgs e)
+        {
+            gameTitle7.BackColor = Color.Ivory;
+            gameTitle7.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void gameTitle7_MouseLeave(object sender, EventArgs e)
+        {
+            gameTitle7.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            gameTitle7.ForeColor = Color.Ivory;
+        }
+        private void gameTitle8_MouseEnter(object sender, EventArgs e)
+        {
+            gameTitle8.BackColor = Color.Ivory;
+            gameTitle8.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void gameTitle8_MouseLeave(object sender, EventArgs e)
+        {
+            gameTitle8.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            gameTitle8.ForeColor = Color.Ivory;
+        }
+        private void exitBtn_MouseEnter(object sender, EventArgs e)
+        {
+            exitBtn.BackColor = Color.Ivory;
+            exitBtn.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void exitBtn_MouseLeave(object sender, EventArgs e)
+        {
+            exitBtn.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            exitBtn.ForeColor = Color.Ivory;
+        }
+        private void helpBtn_MouseEnter(object sender, EventArgs e)
+        {
+            helpBtn.BackColor = Color.Ivory;
+            helpBtn.ForeColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+        }
+        private void helpBtn_MouseLeave(object sender, EventArgs e)
+        {
+            helpBtn.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            helpBtn.ForeColor = Color.Ivory;
         }
     }
 }
