@@ -31,7 +31,7 @@ namespace MiniGames
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MiniGamesForm_Load(object sender, EventArgs e)
         {
             OriginalFormSize = this.Size;
             HelpRectangle = new Rectangle(helpBtn.Location.X, helpBtn.Location.Y, helpBtn.Width, helpBtn.Height);
@@ -48,18 +48,18 @@ namespace MiniGames
             GameTitle8Rectangle = new Rectangle(gameTitle8.Location.X, gameTitle8.Location.Y, gameTitle8.Width, gameTitle8.Height);
         }
         
-        private void Form1_Resize(object sender, EventArgs e)
+        private void MiniGamesForm_Resize(object sender, EventArgs e)
         {
-            // resizeButtons(HelpRectangle, helpBtn);
-            // resizeButtons(ExitRectangle, exitBtn);
-            // resizeButtons(MenuTitleRectangle, menuTitle);
-            // resizeButtons(GameTitle1Rectangle, gameTitle1);
-            // resizeButtons(GameTitle2Rectangle, gameTitle2);
-            // resizeButtons(GameTitle3Rectangle, gameTitle3);
-            // resizeButtons(GameTitle4Rectangle, gameTitle4);
-            // resizeButtons(GameTitle5Rectangle, gameTitle5);
-            // resizeButtons(GameTitle6Rectangle, gameTitle6);
-            // resizeButtons(GameTitle7Rectangle, gameTitle7);
+            ResizeButtons(HelpRectangle, helpBtn);
+            ResizeButtons(ExitRectangle, exitBtn);
+            ResizeButtons(MenuTitleRectangle, menuTitle);
+            ResizeButtons(GameTitle1Rectangle, gameTitle1);
+            ResizeButtons(GameTitle2Rectangle, gameTitle2);
+            ResizeButtons(GameTitle3Rectangle, gameTitle3);
+            ResizeButtons(GameTitle4Rectangle, gameTitle4);
+            ResizeButtons(GameTitle5Rectangle, gameTitle5);
+            ResizeButtons(GameTitle6Rectangle, gameTitle6);
+            ResizeButtons(GameTitle7Rectangle, gameTitle7);
             ResizeButtons(GameTitle8Rectangle, gameTitle8);
         }
         
