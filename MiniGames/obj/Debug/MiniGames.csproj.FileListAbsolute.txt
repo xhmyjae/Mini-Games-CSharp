@@ -8,3 +8,4 @@ D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debu
 D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.exe
 D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.pdb
 D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.Form1.resources
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.Pong.resources

@@ -61,10 +61,11 @@
             this.gameTitle1.Location = new System.Drawing.Point(21, 248);
             this.gameTitle1.Margin = new System.Windows.Forms.Padding(0);
             this.gameTitle1.Name = "gameTitle1";
-            this.gameTitle1.Size = new System.Drawing.Size(84, 33);
+            this.gameTitle1.Size = new System.Drawing.Size(84, 29);
             this.gameTitle1.TabIndex = 1;
             this.gameTitle1.Text = "PONG";
             this.gameTitle1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle1.Click += new System.EventHandler(this.LoadPong);
             this.gameTitle1.MouseEnter += new System.EventHandler(this.gameTitle1_MouseEnter);
             this.gameTitle1.MouseLeave += new System.EventHandler(this.gameTitle1_MouseLeave);
             // 
@@ -193,6 +194,7 @@
             this.exitBtn.TabIndex = 10;
             this.exitBtn.Text = "EXIT";
             this.exitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.exitBtn.Click += new System.EventHandler(this.Exit);
             this.exitBtn.MouseEnter += new System.EventHandler(this.exitBtn_MouseEnter);
             this.exitBtn.MouseLeave += new System.EventHandler(this.exitBtn_MouseLeave);
             // 
@@ -213,10 +215,11 @@
             this.Controls.Add(this.gameTitle7);
             this.Controls.Add(this.gameTitle8);
             this.Controls.Add(this.menuTitle);
+            this.Location = new System.Drawing.Point(15, 15);
             this.MinimumSize = new System.Drawing.Size(850, 638);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "The Rat Games";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.GamesMenu_Load);
             this.Resize += new System.EventHandler(this.GamesMenu_Resize);
             this.ResumeLayout(false);

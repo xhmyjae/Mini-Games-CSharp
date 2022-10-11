@@ -50,33 +50,17 @@ namespace MiniGames
         
         private void GamesMenu_Resize(object sender, EventArgs e)
         {
-            ResizeButtons(HelpRectangle, helpBtn);
-            ResizeButtons(ExitRectangle, exitBtn);
-            ResizeButtons(MenuTitleRectangle, menuTitle);
-            ResizeButtons(GameTitle1Rectangle, gameTitle1);
-            ResizeButtons(GameTitle2Rectangle, gameTitle2);
-            ResizeButtons(GameTitle3Rectangle, gameTitle3);
-            ResizeButtons(GameTitle4Rectangle, gameTitle4);
-            ResizeButtons(GameTitle5Rectangle, gameTitle5);
-            ResizeButtons(GameTitle6Rectangle, gameTitle6);
-            ResizeButtons(GameTitle7Rectangle, gameTitle7);
-            ResizeButtons(GameTitle8Rectangle, gameTitle8);
-        }
-        
-        private void ResizeButtons(Rectangle originalControlRect, Control control)
-        {
-            float xAxis = (float)(this.Width) / (float)(OriginalFormSize.Width);
-            float yAxis = (float)(this.Height) / (float)(OriginalFormSize.Height);
-            
-            int newXPosition = (int)(originalControlRect.X * xAxis);
-            int newYPosition = (int)(originalControlRect.Y * yAxis);
-            
-            
-            int newWidth = (int)(originalControlRect.Width * xAxis);
-            int newHeight = (int)(originalControlRect.Height * yAxis);
-            
-            control.Location = new Point(newXPosition, newYPosition);
-            control.Size = new Size(newWidth, newHeight);
+            Utils.ResizeButtons(HelpRectangle, helpBtn, this, OriginalFormSize);
+            Utils.ResizeButtons(ExitRectangle, exitBtn, this, OriginalFormSize);
+            Utils.ResizeButtons(MenuTitleRectangle, menuTitle, this, OriginalFormSize);
+            Utils.ResizeButtons(GameTitle1Rectangle, gameTitle1, this, OriginalFormSize);
+            Utils.ResizeButtons(GameTitle2Rectangle, gameTitle2, this, OriginalFormSize);
+            Utils.ResizeButtons(GameTitle3Rectangle, gameTitle3, this, OriginalFormSize);
+            Utils.ResizeButtons(GameTitle4Rectangle, gameTitle4, this, OriginalFormSize);
+            Utils.ResizeButtons(GameTitle5Rectangle, gameTitle5, this, OriginalFormSize);
+            Utils.ResizeButtons(GameTitle6Rectangle, gameTitle6, this, OriginalFormSize);
+            Utils.ResizeButtons(GameTitle7Rectangle, gameTitle7, this, OriginalFormSize);
+            Utils.ResizeButtons(GameTitle8Rectangle, gameTitle8, this, OriginalFormSize);
         }
 
         private void gameTitle1_MouseEnter(object sender, EventArgs e)
@@ -178,6 +162,23 @@ namespace MiniGames
         {
             helpBtn.BackColor = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             helpBtn.ForeColor = Color.Ivory;
+        }
+
+        private void LoadPong(object sender, EventArgs e)
+        {
+            Pong pongWindow = new Pong();
+            pongWindow.Show();
+            this.Hide();
+        }
+
+        private void Exit(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
         }
     }
 }
