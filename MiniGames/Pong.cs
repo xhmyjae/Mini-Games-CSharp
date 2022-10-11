@@ -57,6 +57,9 @@ namespace MiniGames
             
             winTextPlayer1.Visible = false;
             winTextPlayer2.Visible = false;
+            winSquirrel.Visible = false;
+            winBingusPlayer1.Visible = false;
+            winBingusPlayer2.Visible = false;
         }
         
         private void Pong_Resize(object sender, EventArgs e)
@@ -181,6 +184,8 @@ namespace MiniGames
                 startPongButton.Visible = true;
                 timeRepeat.Enabled = false;
                 exitPongButton.Visible = true;
+                winSquirrel.Visible = true;
+                winBingusPlayer1.Visible = true;
             }
 
             if (ScorePlayer2 > 10)
@@ -190,6 +195,8 @@ namespace MiniGames
                 startPongButton.Visible = true;
                 timeRepeat.Enabled = false;
                 exitPongButton.Visible = true;
+                winSquirrel.Visible = true;
+                winBingusPlayer2.Visible = true;
             }
         }
 
@@ -201,11 +208,15 @@ namespace MiniGames
             timeRepeat.Enabled = true;
             startPongButton.Visible = false;
             exitPongButton.Visible = false;
+            winSquirrel.Visible = false;
+            winBingusPlayer1.Visible = false;
+            winBingusPlayer2.Visible = false;
         }
 
         private void exitPongButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }

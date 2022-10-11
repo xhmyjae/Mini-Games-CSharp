@@ -90,7 +90,9 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\dancing_squirrel.gif" />
       <Content Include="Resources\night_city.gif" />
+      <Content Include="Resources\_5214_dancing_sphynx_cat.gif" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

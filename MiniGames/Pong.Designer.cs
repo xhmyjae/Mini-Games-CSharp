@@ -42,11 +42,17 @@ namespace MiniGames
             this.winTextPlayer2 = new System.Windows.Forms.Label();
             this.startPongButton = new System.Windows.Forms.Button();
             this.exitPongButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.midLine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxPlayer2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeRepeat)).BeginInit();
+            this.winBingusPlayer1 = new System.Windows.Forms.PictureBox();
+            this.winBingusPlayer2 = new System.Windows.Forms.PictureBox();
+            this.winSquirrel = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize) (this.midLine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.boxPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.boxPlayer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.ball)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.timeRepeat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.winBingusPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.winBingusPlayer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.winSquirrel)).BeginInit();
             this.SuspendLayout();
             // 
             // midLine
@@ -60,7 +66,7 @@ namespace MiniGames
             // 
             // scorePlayer1
             // 
-            this.scorePlayer1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scorePlayer1.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.scorePlayer1.ForeColor = System.Drawing.Color.Ivory;
             this.scorePlayer1.Location = new System.Drawing.Point(305, 21);
             this.scorePlayer1.Name = "scorePlayer1";
@@ -70,7 +76,7 @@ namespace MiniGames
             // 
             // scorePlayer2
             // 
-            this.scorePlayer2.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scorePlayer2.Font = new System.Drawing.Font("Courier New", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.scorePlayer2.ForeColor = System.Drawing.Color.Ivory;
             this.scorePlayer2.Location = new System.Drawing.Point(444, 21);
             this.scorePlayer2.Name = "scorePlayer2";
@@ -113,7 +119,7 @@ namespace MiniGames
             // 
             // winTextPlayer1
             // 
-            this.winTextPlayer1.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winTextPlayer1.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.winTextPlayer1.ForeColor = System.Drawing.Color.Ivory;
             this.winTextPlayer1.Location = new System.Drawing.Point(270, 98);
             this.winTextPlayer1.Name = "winTextPlayer1";
@@ -124,7 +130,7 @@ namespace MiniGames
             // 
             // winTextPlayer2
             // 
-            this.winTextPlayer2.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winTextPlayer2.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.winTextPlayer2.ForeColor = System.Drawing.Color.Ivory;
             this.winTextPlayer2.Location = new System.Drawing.Point(263, 98);
             this.winTextPlayer2.Name = "winTextPlayer2";
@@ -137,8 +143,8 @@ namespace MiniGames
             // 
             this.startPongButton.BackColor = System.Drawing.Color.Ivory;
             this.startPongButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.startPongButton.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.startPongButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.startPongButton.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.startPongButton.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (24)))), ((int) (((byte) (24)))));
             this.startPongButton.Location = new System.Drawing.Point(331, 393);
             this.startPongButton.Name = "startPongButton";
             this.startPongButton.Size = new System.Drawing.Size(163, 76);
@@ -151,8 +157,8 @@ namespace MiniGames
             // 
             this.exitPongButton.BackColor = System.Drawing.Color.Ivory;
             this.exitPongButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.exitPongButton.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitPongButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.exitPongButton.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.exitPongButton.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (24)))), ((int) (((byte) (24)))));
             this.exitPongButton.Location = new System.Drawing.Point(331, 475);
             this.exitPongButton.Name = "exitPongButton";
             this.exitPongButton.Size = new System.Drawing.Size(163, 76);
@@ -161,11 +167,42 @@ namespace MiniGames
             this.exitPongButton.UseVisualStyleBackColor = false;
             this.exitPongButton.Click += new System.EventHandler(this.exitPongButton_Click);
             // 
+            // winBingusPlayer1
+            // 
+            this.winBingusPlayer1.Image = global::MiniGames.Properties.Resources._5214_dancing_sphynx_cat;
+            this.winBingusPlayer1.Location = new System.Drawing.Point(78, 400);
+            this.winBingusPlayer1.Name = "winBingusPlayer1";
+            this.winBingusPlayer1.Size = new System.Drawing.Size(185, 193);
+            this.winBingusPlayer1.TabIndex = 11;
+            this.winBingusPlayer1.TabStop = false;
+            // 
+            // winBingusPlayer2
+            // 
+            this.winBingusPlayer2.Image = global::MiniGames.Properties.Resources._5214_dancing_sphynx_cat;
+            this.winBingusPlayer2.Location = new System.Drawing.Point(563, 400);
+            this.winBingusPlayer2.Name = "winBingusPlayer2";
+            this.winBingusPlayer2.Size = new System.Drawing.Size(185, 193);
+            this.winBingusPlayer2.TabIndex = 12;
+            this.winBingusPlayer2.TabStop = false;
+            // 
+            // winSquirrel
+            // 
+            this.winSquirrel.Image = global::MiniGames.Properties.Resources.dancing_squirrel;
+            this.winSquirrel.Location = new System.Drawing.Point(342, 207);
+            this.winSquirrel.Name = "winSquirrel";
+            this.winSquirrel.Size = new System.Drawing.Size(122, 121);
+            this.winSquirrel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.winSquirrel.TabIndex = 13;
+            this.winSquirrel.TabStop = false;
+            // 
             // Pong
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (24)))), ((int) (((byte) (24)))));
             this.ClientSize = new System.Drawing.Size(832, 591);
+            this.Controls.Add(this.winSquirrel);
+            this.Controls.Add(this.winBingusPlayer2);
+            this.Controls.Add(this.winBingusPlayer1);
             this.Controls.Add(this.exitPongButton);
             this.Controls.Add(this.startPongButton);
             this.Controls.Add(this.winTextPlayer2);
@@ -185,13 +222,22 @@ namespace MiniGames
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Pong_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Pong_KeyUp);
             this.Resize += new System.EventHandler(this.Pong_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.midLine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boxPlayer2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeRepeat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.midLine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.boxPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.boxPlayer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.ball)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.timeRepeat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.winBingusPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.winBingusPlayer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.winSquirrel)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox winBingusPlayer2;
+
+        private System.Windows.Forms.PictureBox winBingusPlayer1;
+
+        private System.Windows.Forms.PictureBox winSquirrel;
 
         private System.Windows.Forms.Button exitPongButton;
 

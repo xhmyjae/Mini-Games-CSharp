@@ -62,6 +62,26 @@ namespace MiniGames.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5214_dancing_sphynx_cat {
+            get {
+                object obj = ResourceManager.GetObject("_5214_dancing_sphynx_cat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dancing_squirrel {
+            get {
+                object obj = ResourceManager.GetObject("dancing_squirrel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap night_city {
             get {
                 object obj = ResourceManager.GetObject("night_city", resourceCulture);
