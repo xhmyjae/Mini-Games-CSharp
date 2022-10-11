@@ -52,6 +52,12 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
+        <Compile Include="Platformer.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Platformer.Designer.cs">
+          <DependentUpon>Platformer.cs</DependentUpon>
+        </Compile>
         <Compile Include="Pong.cs">
           <SubType>Form</SubType>
         </Compile>
