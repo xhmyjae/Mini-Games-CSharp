@@ -2,8 +2,8 @@
 A bunch of mini games to play when you are getting bored. 
 
 You will find :
-- Pong (in dev)
-- Platformer (soon)
+- Pong
+- Platformer (in dev)
 - Brick breaker (soon)
 - Pac Man (soon)
 - Snake (soon)
