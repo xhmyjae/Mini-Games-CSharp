@@ -41,6 +41,7 @@ namespace MiniGames
             this.winTextPlayer1 = new System.Windows.Forms.Label();
             this.winTextPlayer2 = new System.Windows.Forms.Label();
             this.startPongButton = new System.Windows.Forms.Button();
+            this.exitPongButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.midLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxPlayer2)).BeginInit();
@@ -146,11 +147,26 @@ namespace MiniGames
             this.startPongButton.UseVisualStyleBackColor = false;
             this.startPongButton.Click += new System.EventHandler(this.startPongButton_Click);
             // 
+            // exitPongButton
+            // 
+            this.exitPongButton.BackColor = System.Drawing.Color.Ivory;
+            this.exitPongButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.exitPongButton.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitPongButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.exitPongButton.Location = new System.Drawing.Point(331, 475);
+            this.exitPongButton.Name = "exitPongButton";
+            this.exitPongButton.Size = new System.Drawing.Size(163, 76);
+            this.exitPongButton.TabIndex = 10;
+            this.exitPongButton.Text = "EXIT";
+            this.exitPongButton.UseVisualStyleBackColor = false;
+            this.exitPongButton.Click += new System.EventHandler(this.exitPongButton_Click);
+            // 
             // Pong
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(832, 591);
+            this.Controls.Add(this.exitPongButton);
             this.Controls.Add(this.startPongButton);
             this.Controls.Add(this.winTextPlayer2);
             this.Controls.Add(this.winTextPlayer1);
@@ -176,6 +192,8 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.timeRepeat)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button exitPongButton;
 
         private System.Windows.Forms.Button startPongButton;
 

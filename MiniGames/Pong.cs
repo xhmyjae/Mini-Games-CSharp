@@ -16,6 +16,8 @@ namespace MiniGames
         private Rectangle ScorePlayer2Rectangle;
         private Rectangle WinTextPlayer1Rectangle;
         private Rectangle WinTextPlayer2Rectangle;
+        private Rectangle StartPongButtonRectange;
+        private Rectangle ExitPongButtonRectangle;
         private Size OriginalFormSize;
         
         // Gameplay
@@ -45,11 +47,16 @@ namespace MiniGames
             ScorePlayer2Rectangle = new Rectangle(scorePlayer2.Location.X, scorePlayer2.Location.Y, scorePlayer2.Width, scorePlayer2.Height);
             WinTextPlayer1Rectangle = new Rectangle(winTextPlayer1.Location.X, winTextPlayer1.Location.Y, winTextPlayer1.Width, winTextPlayer1.Height);
             WinTextPlayer2Rectangle = new Rectangle(winTextPlayer2.Location.X, winTextPlayer2.Location.Y, winTextPlayer2.Width, winTextPlayer2.Height);
+            StartPongButtonRectange = new Rectangle(startPongButton.Location.X, startPongButton.Location.Y, startPongButton.Width, startPongButton.Height);
+            ExitPongButtonRectangle = new Rectangle(exitPongButton.Location.X, exitPongButton.Location.Y, exitPongButton.Width, exitPongButton.Height);
 
             // Places ball at the center of the screen
             ball.Left = (this.ClientSize.Width - ball.Width) / 2;
             ball.Top = (this.ClientSize.Height - ball.Height) / 2;
             midLine.Left = (this.ClientSize.Width - ball.Width) / 2;
+            
+            winTextPlayer1.Visible = false;
+            winTextPlayer2.Visible = false;
         }
         
         private void Pong_Resize(object sender, EventArgs e)
@@ -62,6 +69,8 @@ namespace MiniGames
             Utils.ResizeButtons(ScorePlayer2Rectangle, scorePlayer2, this, OriginalFormSize);
             Utils.ResizeButtons(WinTextPlayer1Rectangle, winTextPlayer1, this, OriginalFormSize);
             Utils.ResizeButtons(WinTextPlayer2Rectangle, winTextPlayer2, this, OriginalFormSize);
+            Utils.ResizeButtons(StartPongButtonRectange, startPongButton, this, OriginalFormSize);
+            Utils.ResizeButtons(ExitPongButtonRectangle, exitPongButton, this, OriginalFormSize);
         }
 
         private void Pong_FormClosing(object sender, FormClosingEventArgs e)
@@ -113,9 +122,6 @@ namespace MiniGames
              // Set scores
             scorePlayer1.Text = "" + ScorePlayer1;
             scorePlayer2.Text = "" + ScorePlayer2;
-
-            winTextPlayer1.Visible = false;
-            winTextPlayer2.Visible = false;
 
             ball.Top -= BallDirectionY;
             ball.Left -= BallDirectionX;
@@ -174,6 +180,7 @@ namespace MiniGames
                 winTextPlayer1.Visible = true;
                 startPongButton.Visible = true;
                 timeRepeat.Enabled = false;
+                exitPongButton.Visible = true;
             }
 
             if (ScorePlayer2 > 10)
@@ -182,6 +189,7 @@ namespace MiniGames
                 winTextPlayer2.Visible = true;
                 startPongButton.Visible = true;
                 timeRepeat.Enabled = false;
+                exitPongButton.Visible = true;
             }
         }
 
@@ -192,6 +200,12 @@ namespace MiniGames
             ScorePlayer2 = 0;
             timeRepeat.Enabled = true;
             startPongButton.Visible = false;
+            exitPongButton.Visible = false;
+        }
+
+        private void exitPongButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
