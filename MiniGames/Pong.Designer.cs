@@ -40,6 +40,7 @@ namespace MiniGames
             this.timeRepeat = new System.Timers.Timer();
             this.winTextPlayer1 = new System.Windows.Forms.Label();
             this.winTextPlayer2 = new System.Windows.Forms.Label();
+            this.startPongButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.midLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boxPlayer2)).BeginInit();
@@ -105,7 +106,6 @@ namespace MiniGames
             // 
             // timeRepeat
             // 
-            this.timeRepeat.Enabled = true;
             this.timeRepeat.Interval = 10D;
             this.timeRepeat.SynchronizingObject = this;
             this.timeRepeat.Elapsed += new System.Timers.ElapsedEventHandler(this.timeRepeat_Elapsed);
@@ -132,11 +132,26 @@ namespace MiniGames
             this.winTextPlayer2.Text = "Player 2 WON !";
             this.winTextPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // startPongButton
+            // 
+            this.startPongButton.BackColor = System.Drawing.Color.Ivory;
+            this.startPongButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.startPongButton.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startPongButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.startPongButton.Location = new System.Drawing.Point(331, 393);
+            this.startPongButton.Name = "startPongButton";
+            this.startPongButton.Size = new System.Drawing.Size(163, 76);
+            this.startPongButton.TabIndex = 9;
+            this.startPongButton.Text = "START";
+            this.startPongButton.UseVisualStyleBackColor = false;
+            this.startPongButton.Click += new System.EventHandler(this.startPongButton_Click);
+            // 
             // Pong
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.ClientSize = new System.Drawing.Size(832, 591);
+            this.Controls.Add(this.startPongButton);
             this.Controls.Add(this.winTextPlayer2);
             this.Controls.Add(this.winTextPlayer1);
             this.Controls.Add(this.ball);
@@ -161,6 +176,8 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.timeRepeat)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button startPongButton;
 
         private System.Windows.Forms.Label winTextPlayer1;
         private System.Windows.Forms.Label winTextPlayer2;

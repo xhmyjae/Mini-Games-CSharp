@@ -60,6 +60,8 @@ namespace MiniGames
             Utils.ResizeButtons(BallRectangle, ball, this, OriginalFormSize);
             Utils.ResizeButtons(ScorePlayer1Rectangle, scorePlayer1, this, OriginalFormSize);
             Utils.ResizeButtons(ScorePlayer2Rectangle, scorePlayer2, this, OriginalFormSize);
+            Utils.ResizeButtons(WinTextPlayer1Rectangle, winTextPlayer1, this, OriginalFormSize);
+            Utils.ResizeButtons(WinTextPlayer2Rectangle, winTextPlayer2, this, OriginalFormSize);
         }
 
         private void Pong_FormClosing(object sender, FormClosingEventArgs e)
@@ -170,13 +172,26 @@ namespace MiniGames
             {
                 timeRepeat.Stop();
                 winTextPlayer1.Visible = true;
+                startPongButton.Visible = true;
+                timeRepeat.Enabled = false;
             }
 
             if (ScorePlayer2 > 10)
             {
                 timeRepeat.Stop();
                 winTextPlayer2.Visible = true;
+                startPongButton.Visible = true;
+                timeRepeat.Enabled = false;
             }
+        }
+
+        private void startPongButton_Click(object sender, EventArgs e)
+        {
+            KeyPreview = true;
+            ScorePlayer1 = 0;
+            ScorePlayer2 = 0;
+            timeRepeat.Enabled = true;
+            startPongButton.Visible = false;
         }
     }
 }
