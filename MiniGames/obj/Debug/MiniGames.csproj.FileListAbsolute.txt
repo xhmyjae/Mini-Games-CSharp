@@ -20,3 +20,4 @@ C:\Users\jaech\OneDrive\Documents\cours\csharp\Mini-Games-CSharp\MiniGames\obj\D
 C:\Users\jaech\OneDrive\Documents\cours\csharp\Mini-Games-CSharp\MiniGames\obj\Debug\MiniGames.csproj.CoreCompileInputs.cache
 C:\Users\jaech\OneDrive\Documents\cours\csharp\Mini-Games-CSharp\MiniGames\obj\Debug\MiniGames.exe
 C:\Users\jaech\OneDrive\Documents\cours\csharp\Mini-Games-CSharp\MiniGames\obj\Debug\MiniGames.pdb
+D:\Users\jaech\Desktop\s t u d i e s\YNOV\L2\CSharp\MiniGames\MiniGames\obj\Debug\MiniGames.Platformer.resources

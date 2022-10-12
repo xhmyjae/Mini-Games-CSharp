@@ -81,6 +81,11 @@ namespace MiniGames
             Form1 menu = new Form1();
             menu.Show();
         }
+        
+        private void exitPongButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private void Pong_KeyDown(object sender, KeyEventArgs e)
         {
@@ -211,11 +216,6 @@ namespace MiniGames
             winSquirrel.Visible = false;
             winBingusPlayer1.Visible = false;
             winBingusPlayer2.Visible = false;
-        }
-
-        private void exitPongButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
     }
