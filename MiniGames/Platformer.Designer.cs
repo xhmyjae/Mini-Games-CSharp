@@ -65,6 +65,7 @@ namespace MiniGames
             this.ratTitle1 = new System.Windows.Forms.PictureBox();
             this.score = new System.Windows.Forms.Label();
             this.timeRepeat = new System.Timers.Timer();
+            this.debug = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple2)).BeginInit();
@@ -111,8 +112,7 @@ namespace MiniGames
             // 
             // player
             // 
-            this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Image = global::MiniGames.Properties.Resources.cropRat;
+            this.player.BackColor = System.Drawing.Color.Aqua;
             this.player.Location = new System.Drawing.Point(0, 325);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(80, 80);
@@ -482,10 +482,18 @@ namespace MiniGames
             // 
             // timeRepeat
             // 
-            this.timeRepeat.Enabled = true;
-            this.timeRepeat.Interval = 20D;
+            this.timeRepeat.Interval = 10D;
             this.timeRepeat.SynchronizingObject = this;
             this.timeRepeat.Elapsed += new System.Timers.ElapsedEventHandler(this.timeRepeat_Elapsed);
+            // 
+            // debug
+            // 
+            this.debug.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.debug.Location = new System.Drawing.Point(326, 556);
+            this.debug.Name = "debug";
+            this.debug.Size = new System.Drawing.Size(167, 34);
+            this.debug.TabIndex = 34;
+            this.debug.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Platformer
             // 
@@ -494,6 +502,7 @@ namespace MiniGames
             this.BackgroundImage = global::MiniGames.Properties.Resources.NNZthjY;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(832, 591);
+            this.Controls.Add(this.debug);
             this.Controls.Add(this.score);
             this.Controls.Add(this.ratTitle1);
             this.Controls.Add(this.ratTitle2);
@@ -569,6 +578,8 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.timeRepeat)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label debug;
 
         private System.Timers.Timer timeRepeat;
 

@@ -151,12 +151,9 @@ namespace MiniGames
             ratTitle2.Visible = false;
             gameTitle.Visible = false;
 
-            Score = 0;
-        }
+            timeRepeat.Enabled = true;
 
-        private void timeRepeat_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            
+            Score = 0;
         }
 
         private void Platformer_KeyDown(object sender, KeyEventArgs e)
@@ -189,6 +186,27 @@ namespace MiniGames
                     PlayerJump = false;
                     break;
             }
+        }
+        
+        private void timeRepeat_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            // score.Text = "" + Score;
+
+            if (PlayerGoLeft && player.Left > 0)
+            {
+                player.Left -= 7;
+            }
+
+            if (PlayerGoRight && player.Right < ClientSize.Width)
+            {
+                player.Left += 7;
+                debug.Text = player.Right.ToString();
+            }
+            //
+            // if (Score == 9)
+            // {
+            //     timeRepeat.Stop();
+            // }
         }
     }
 }
