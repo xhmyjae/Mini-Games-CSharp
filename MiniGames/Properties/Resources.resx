@@ -68,4 +68,25 @@
   <data name="dancing_squirrel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dancing_squirrel.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rat.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cropRat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cropRat.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NNZthjY" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NNZthjY.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="goodCheese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goodCheese.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bloc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bloc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blocShadow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blocShadow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reverseCropRat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reverseCropRat.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

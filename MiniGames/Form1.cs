@@ -180,5 +180,12 @@ namespace MiniGames
         {
             this.Close();
         }
+
+        private void LoadPlatformer(object sender, EventArgs e)
+        {
+            Platformer platformerWindow = new Platformer();
+            platformerWindow.Show();
+            this.Hide();
+        }
     }
 }

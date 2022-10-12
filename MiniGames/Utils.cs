@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MiniGames
 {
@@ -22,5 +24,21 @@ namespace MiniGames
             control.Location = new Point(newXPosition, newYPosition);
             control.Size = new Size(newWidth, newHeight);
         }
+        
+        public static IEnumerable<Control> GetAllControls(Control root)
+        {
+            var stack = new Stack<Control>();
+            stack.Push(root);
+
+            while (stack.Any())
+            {
+                var next = stack.Pop();
+                foreach (Control child in next.Controls)
+                    stack.Push(child);
+
+                yield return next;
+            }
+        }
+        
     }
 }

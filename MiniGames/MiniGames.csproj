@@ -99,8 +99,15 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\bloc.png" />
+      <Content Include="Resources\blocShadow.png" />
+      <Content Include="Resources\cropRat.gif" />
       <Content Include="Resources\dancing_squirrel.gif" />
+      <Content Include="Resources\goodCheese.png" />
       <Content Include="Resources\night_city.gif" />
+      <Content Include="Resources\NNZthjY.jpeg" />
+      <Content Include="Resources\rat.gif" />
+      <Content Include="Resources\reverseCropRat.gif" />
       <Content Include="Resources\_5214_dancing_sphynx_cat.gif" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

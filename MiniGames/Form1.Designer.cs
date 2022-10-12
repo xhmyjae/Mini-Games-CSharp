@@ -80,6 +80,7 @@
             this.gameTitle2.TabIndex = 2;
             this.gameTitle2.Text = "PLATFORMER";
             this.gameTitle2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameTitle2.Click += new System.EventHandler(this.LoadPlatformer);
             this.gameTitle2.MouseEnter += new System.EventHandler(this.gameTitle2_MouseEnter);
             this.gameTitle2.MouseLeave += new System.EventHandler(this.gameTitle2_MouseLeave);
             // 
