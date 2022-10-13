@@ -200,7 +200,7 @@ namespace MiniGames
             // 
             this.blocSimple9.BackColor = System.Drawing.Color.Transparent;
             this.blocSimple9.Image = global::MiniGames.Properties.Resources.blocShadow;
-            this.blocSimple9.Location = new System.Drawing.Point(754, 589);
+            this.blocSimple9.Location = new System.Drawing.Point(754, 592);
             this.blocSimple9.Name = "blocSimple9";
             this.blocSimple9.Size = new System.Drawing.Size(80, 80);
             this.blocSimple9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

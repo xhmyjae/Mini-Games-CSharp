@@ -52,6 +52,8 @@ namespace MiniGames
 
         private void timerGame_Elapsed(object sender, ElapsedEventArgs e)
         {
+            player1.Top += PlayerSpeed;
+            
             if (Player1GoLeft && player1.Left > 0)
             {
                 player1.Left -= PlayerSpeed;
@@ -65,6 +67,18 @@ namespace MiniGames
             if (Player1Jump)
             {
                 player1.Top -= PlayerJumpSpeed;
+            }
+
+            foreach (Control control in this.Controls)
+            {
+                if (control.Tag == "bloc")
+                {
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && !Player1Jump)
+                    {
+                        player1.Top = control.Top - player1.Height;
+                    }
+
+                }
             }
         }
     }
