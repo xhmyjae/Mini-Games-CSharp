@@ -199,8 +199,7 @@ namespace MiniGames
             // blocSimple9
             // 
             this.blocSimple9.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple9.Image = global::MiniGames.Properties.Resources.blocShadow;
-            this.blocSimple9.Location = new System.Drawing.Point(754, 592);
+            this.blocSimple9.Location = new System.Drawing.Point(754, 580);
             this.blocSimple9.Name = "blocSimple9";
             this.blocSimple9.Size = new System.Drawing.Size(80, 80);
             this.blocSimple9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -250,7 +249,7 @@ namespace MiniGames
             this.player1.Image = global::MiniGames.Properties.Resources.cropRat;
             this.player1.Location = new System.Drawing.Point(38, 246);
             this.player1.Name = "player1";
-            this.player1.Size = new System.Drawing.Size(80, 80);
+            this.player1.Size = new System.Drawing.Size(70, 70);
             this.player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player1.TabIndex = 17;
             this.player1.TabStop = false;

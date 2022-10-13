@@ -1,4 +1,5 @@
-﻿using System.Timers;
+﻿using System.Drawing;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace MiniGames
@@ -21,9 +22,11 @@ namespace MiniGames
             {
                 case Keys.Right :
                     Player1GoRight = true;
+                    player1.Image = Properties.Resources.cropRat;
                     break;
                 case Keys.Left :
                     Player1GoLeft = true;
+                    player1.Image = Properties.Resources.reverseCropRat;
                     break;
                 case Keys.Up :
                     if (!Player1Jump)
