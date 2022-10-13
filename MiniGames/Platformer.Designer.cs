@@ -61,8 +61,6 @@ namespace MiniGames
             this.exitPlatformerButton = new System.Windows.Forms.Button();
             this.startPlatformerButton = new System.Windows.Forms.Button();
             this.gameTitle = new System.Windows.Forms.Label();
-            this.ratTitle2 = new System.Windows.Forms.PictureBox();
-            this.ratTitle1 = new System.Windows.Forms.PictureBox();
             this.score = new System.Windows.Forms.Label();
             this.timeRepeat = new System.Timers.Timer();
             this.debug = new System.Windows.Forms.Label();
@@ -93,8 +91,6 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.cheese8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheese9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocLeave)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ratTitle2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ratTitle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeRepeat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,14 +105,14 @@ namespace MiniGames
             this.blocSimple1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSimple1.TabIndex = 0;
             this.blocSimple1.TabStop = false;
+            this.blocSimple1.Tag = "bloc";
             // 
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Aqua;
-            this.player.Location = new System.Drawing.Point(0, 325);
+            this.player.Location = new System.Drawing.Point(1, 325);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(80, 80);
-            this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player.TabIndex = 1;
             this.player.TabStop = false;
             // 
@@ -131,6 +127,7 @@ namespace MiniGames
             this.blocSimple2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSimple2.TabIndex = 2;
             this.blocSimple2.TabStop = false;
+            this.blocSimple2.Tag = "bloc";
             // 
             // blocThin1
             // 
@@ -143,6 +140,7 @@ namespace MiniGames
             this.blocThin1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocThin1.TabIndex = 3;
             this.blocThin1.TabStop = false;
+            this.blocThin1.Tag = "bloc";
             // 
             // blocSimple8
             // 
@@ -155,6 +153,7 @@ namespace MiniGames
             this.blocSimple8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSimple8.TabIndex = 4;
             this.blocSimple8.TabStop = false;
+            this.blocSimple8.Tag = "bloc";
             // 
             // blocSimple6
             // 
@@ -167,6 +166,7 @@ namespace MiniGames
             this.blocSimple6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSimple6.TabIndex = 5;
             this.blocSimple6.TabStop = false;
+            this.blocSimple6.Tag = "bloc";
             // 
             // blocMoving1
             // 
@@ -179,6 +179,7 @@ namespace MiniGames
             this.blocMoving1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocMoving1.TabIndex = 6;
             this.blocMoving1.TabStop = false;
+            this.blocMoving1.Tag = "bloc";
             // 
             // blocSimple4
             // 
@@ -191,6 +192,7 @@ namespace MiniGames
             this.blocSimple4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSimple4.TabIndex = 7;
             this.blocSimple4.TabStop = false;
+            this.blocSimple4.Tag = "bloc";
             // 
             // blocSimple5
             // 
@@ -203,6 +205,7 @@ namespace MiniGames
             this.blocSimple5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSimple5.TabIndex = 8;
             this.blocSimple5.TabStop = false;
+            this.blocSimple5.Tag = "bloc";
             // 
             // blocSimple3
             // 
@@ -215,6 +218,7 @@ namespace MiniGames
             this.blocSimple3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSimple3.TabIndex = 9;
             this.blocSimple3.TabStop = false;
+            this.blocSimple3.Tag = "bloc";
             // 
             // blocThin2
             // 
@@ -227,6 +231,7 @@ namespace MiniGames
             this.blocThin2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocThin2.TabIndex = 10;
             this.blocThin2.TabStop = false;
+            this.blocThin2.Tag = "bloc";
             // 
             // blocThin3
             // 
@@ -239,6 +244,7 @@ namespace MiniGames
             this.blocThin3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocThin3.TabIndex = 12;
             this.blocThin3.TabStop = false;
+            this.blocThin3.Tag = "bloc";
             // 
             // blocSimple7
             // 
@@ -251,6 +257,7 @@ namespace MiniGames
             this.blocSimple7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSimple7.TabIndex = 13;
             this.blocSimple7.TabStop = false;
+            this.blocSimple7.Tag = "bloc";
             // 
             // blocSpecial1
             // 
@@ -263,6 +270,7 @@ namespace MiniGames
             this.blocSpecial1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSpecial1.TabIndex = 14;
             this.blocSpecial1.TabStop = false;
+            this.blocSpecial1.Tag = "bloc";
             // 
             // blocMoving2
             // 
@@ -275,6 +283,7 @@ namespace MiniGames
             this.blocMoving2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocMoving2.TabIndex = 15;
             this.blocMoving2.TabStop = false;
+            this.blocMoving2.Tag = "bloc";
             // 
             // blocThin4
             // 
@@ -287,6 +296,7 @@ namespace MiniGames
             this.blocThin4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocThin4.TabIndex = 16;
             this.blocThin4.TabStop = false;
+            this.blocThin4.Tag = "bloc";
             // 
             // blocSimple9
             // 
@@ -299,6 +309,7 @@ namespace MiniGames
             this.blocSimple9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.blocSimple9.TabIndex = 17;
             this.blocSimple9.TabStop = false;
+            this.blocSimple9.Tag = "bloc";
             // 
             // cheese1
             // 
@@ -414,7 +425,7 @@ namespace MiniGames
             this.exitPlatformerButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.exitPlatformerButton.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitPlatformerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.exitPlatformerButton.Location = new System.Drawing.Point(331, 475);
+            this.exitPlatformerButton.Location = new System.Drawing.Point(331, 395);
             this.exitPlatformerButton.Name = "exitPlatformerButton";
             this.exitPlatformerButton.Size = new System.Drawing.Size(163, 76);
             this.exitPlatformerButton.TabIndex = 29;
@@ -428,7 +439,7 @@ namespace MiniGames
             this.startPlatformerButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.startPlatformerButton.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startPlatformerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.startPlatformerButton.Location = new System.Drawing.Point(331, 395);
+            this.startPlatformerButton.Location = new System.Drawing.Point(331, 329);
             this.startPlatformerButton.Name = "startPlatformerButton";
             this.startPlatformerButton.Size = new System.Drawing.Size(163, 76);
             this.startPlatformerButton.TabIndex = 28;
@@ -446,28 +457,6 @@ namespace MiniGames
             this.gameTitle.Size = new System.Drawing.Size(412, 68);
             this.gameTitle.TabIndex = 30;
             this.gameTitle.Text = "The rat\'s sewers";
-            // 
-            // ratTitle2
-            // 
-            this.ratTitle2.BackColor = System.Drawing.Color.Transparent;
-            this.ratTitle2.Image = global::MiniGames.Properties.Resources.reverseCropRat;
-            this.ratTitle2.Location = new System.Drawing.Point(500, 227);
-            this.ratTitle2.Name = "ratTitle2";
-            this.ratTitle2.Size = new System.Drawing.Size(427, 364);
-            this.ratTitle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ratTitle2.TabIndex = 31;
-            this.ratTitle2.TabStop = false;
-            // 
-            // ratTitle1
-            // 
-            this.ratTitle1.BackColor = System.Drawing.Color.Transparent;
-            this.ratTitle1.Image = global::MiniGames.Properties.Resources.cropRat;
-            this.ratTitle1.Location = new System.Drawing.Point(-102, 227);
-            this.ratTitle1.Name = "ratTitle1";
-            this.ratTitle1.Size = new System.Drawing.Size(427, 364);
-            this.ratTitle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ratTitle1.TabIndex = 32;
-            this.ratTitle1.TabStop = false;
             // 
             // score
             // 
@@ -499,13 +488,10 @@ namespace MiniGames
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.BackgroundImage = global::MiniGames.Properties.Resources.NNZthjY;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(832, 591);
             this.Controls.Add(this.debug);
             this.Controls.Add(this.score);
-            this.Controls.Add(this.ratTitle1);
-            this.Controls.Add(this.ratTitle2);
             this.Controls.Add(this.gameTitle);
             this.Controls.Add(this.exitPlatformerButton);
             this.Controls.Add(this.startPlatformerButton);
@@ -536,11 +522,11 @@ namespace MiniGames
             this.Controls.Add(this.blocSimple2);
             this.Controls.Add(this.player);
             this.Controls.Add(this.blocSimple1);
+            this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(850, 638);
             this.Name = "Platformer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Platformer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Platformer_FormClosing);
             this.Load += new System.EventHandler(this.Platformer_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Platformer_KeyDown);
@@ -573,8 +559,6 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.cheese8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheese9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocLeave)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ratTitle2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ratTitle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeRepeat)).EndInit();
             this.ResumeLayout(false);
         }
@@ -584,10 +568,6 @@ namespace MiniGames
         private System.Timers.Timer timeRepeat;
 
         private System.Windows.Forms.Label score;
-
-        private System.Windows.Forms.PictureBox ratTitle2;
-
-        private System.Windows.Forms.PictureBox ratTitle1;
 
         private System.Windows.Forms.Label gameTitle;
 

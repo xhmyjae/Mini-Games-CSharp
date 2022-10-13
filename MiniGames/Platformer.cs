@@ -46,10 +46,12 @@ namespace MiniGames
         private Size OriginalFormSize;
         
         // Gameplay
-        private bool PlayerGoRight;
-        private bool PlayerGoLeft;
-        private bool PlayerJump;
+        private bool PlayerGoRight, PlayerGoLeft, PlayerJump;
         private int Score;
+        private int x, y, h, w;
+        private int Speed = 5;
+        private int JumpSpeed = 8;
+        private int Gravity = 5;
 
         public Platformer()
         {
@@ -91,8 +93,8 @@ namespace MiniGames
             GameTitleRectangle = new Rectangle(gameTitle.Location.X, gameTitle.Location.Y, gameTitle.Width, gameTitle.Height);
             ExitPlatformerButtonRectangle = new Rectangle(exitPlatformerButton.Location.X, exitPlatformerButton.Location.Y, exitPlatformerButton.Width, exitPlatformerButton.Height);
             StartPlatformerButtonRectangle = new Rectangle(startPlatformerButton.Location.X, startPlatformerButton.Location.Y, startPlatformerButton.Width, startPlatformerButton.Height);
-            RatTitle1Rectangle = new Rectangle(ratTitle1.Location.X, ratTitle1.Location.Y, ratTitle1.Width, ratTitle1.Height);
-            RatTitle2Rectangle = new Rectangle(ratTitle2.Location.X, ratTitle2.Location.Y, ratTitle2.Width, ratTitle2.Height);
+            // RatTitle1Rectangle = new Rectangle(ratTitle1.Location.X, ratTitle1.Location.Y, ratTitle1.Width, ratTitle1.Height);
+            // RatTitle2Rectangle = new Rectangle(ratTitle2.Location.X, ratTitle2.Location.Y, ratTitle2.Width, ratTitle2.Height);
         }
         
         private void Platformer_Resize(object sender, EventArgs e)
@@ -127,8 +129,8 @@ namespace MiniGames
             Utils.ResizeButtons(GameTitleRectangle, gameTitle, this, OriginalFormSize);
             Utils.ResizeButtons(ExitPlatformerButtonRectangle, exitPlatformerButton, this, OriginalFormSize);
             Utils.ResizeButtons(StartPlatformerButtonRectangle, startPlatformerButton, this, OriginalFormSize);
-            Utils.ResizeButtons(RatTitle1Rectangle, ratTitle1, this, OriginalFormSize);
-            Utils.ResizeButtons(RatTitle2Rectangle, ratTitle2, this, OriginalFormSize);
+            // Utils.ResizeButtons(RatTitle1Rectangle, ratTitle1, this, OriginalFormSize);
+            // Utils.ResizeButtons(RatTitle2Rectangle, ratTitle2, this, OriginalFormSize);
         }
         
         private void Platformer_FormClosing(object sender, FormClosingEventArgs e)
@@ -147,27 +149,28 @@ namespace MiniGames
             KeyPreview = true;
             startPlatformerButton.Visible = false;
             exitPlatformerButton.Visible = false;
-            ratTitle1.Visible = false;
-            ratTitle2.Visible = false;
+            // ratTitle1.Visible = false;
+            // ratTitle2.Visible = false;
             gameTitle.Visible = false;
-
-            timeRepeat.Enabled = true;
-
             Score = 0;
+            timeRepeat.Enabled = true;
         }
 
         private void Platformer_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
-                case Keys.D :
+                case Keys.Right :
                     PlayerGoRight = true;
                     break;
-                case Keys.A :
+                case Keys.Left :
                     PlayerGoLeft = true;
                     break;
-                case Keys.Space :
-                    PlayerJump = true;
+                case Keys.Up :
+                    if (!PlayerJump)
+                    {
+                        PlayerJump = true;
+                    }
                     break;
             }
         }
@@ -190,19 +193,46 @@ namespace MiniGames
         
         private void timeRepeat_Elapsed(object sender, ElapsedEventArgs e)
         {
-            // score.Text = "" + Score;
+            // Set score
+            score.Text = "" + Score;
 
-            if (PlayerGoLeft && player.Left > 0)
-            {
-                player.Left -= 7;
-            }
+            // Implement variables (not working)
+            x = player.Left;
+            y = player.Top;
+            w = player.Size.Width;
+            h = player.Size.Height;
 
+            // Make player move
             if (PlayerGoRight && player.Right < ClientSize.Width)
             {
-                player.Left += 7;
-                debug.Text = player.Right.ToString();
+                player.Left += Speed;
             }
-            //
+            if (PlayerGoLeft && player.Left > 0)
+            {
+                player.Left -= Speed;
+            }
+            
+            if (PlayerJump)
+            {
+                player.Top -= Gravity;
+            }
+
+            // player.Top += JumpSpeed;
+
+            if (PlayerJump && Gravity < 0)
+            {
+                PlayerJump = false;
+            }
+            
+            // Make collisions
+            
+            // Check lose
+            // Add enemies when 
+            if (player.Bottom > ClientSize.Height)
+            {
+                debug.Text = "You lost";
+            }
+
             // if (Score == 9)
             // {
             //     timeRepeat.Stop();

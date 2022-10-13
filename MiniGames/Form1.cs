@@ -183,7 +183,7 @@ namespace MiniGames
 
         private void LoadPlatformer(object sender, EventArgs e)
         {
-            Platformer platformerWindow = new Platformer();
+            PlatRat platformerWindow = new PlatRat();
             platformerWindow.Show();
             this.Hide();
         }
