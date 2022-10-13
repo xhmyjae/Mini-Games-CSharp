@@ -7,7 +7,7 @@ namespace MiniGames
     {
         private bool Player1GoLeft, Player1GoRight, Player1Jump;
         private int PlayerSpeed = 5;
-        private int PlayerJumpSpeed = 8;
+        private int PlayerJumpSpeed = 10;
         private int Score;
         
         public PlatRat()
@@ -52,9 +52,19 @@ namespace MiniGames
 
         private void timerGame_Elapsed(object sender, ElapsedEventArgs e)
         {
-            if (Player1GoLeft)
+            if (Player1GoLeft && player1.Left > 0)
             {
-                blocSimple1.Left -= PlayerSpeed;
+                player1.Left -= PlayerSpeed;
+            }
+
+            if (Player1GoRight && player1.Right < ClientSize.Width)
+            {
+                player1.Left += PlayerSpeed;
+            }
+
+            if (Player1Jump)
+            {
+                player1.Top -= PlayerJumpSpeed;
             }
         }
     }

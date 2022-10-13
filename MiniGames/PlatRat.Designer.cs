@@ -36,7 +36,6 @@ namespace MiniGames
             this.blocSimple1 = new System.Windows.Forms.PictureBox();
             this.blocSimple2 = new System.Windows.Forms.PictureBox();
             this.blocThin1 = new System.Windows.Forms.PictureBox();
-            this.blocSimple3 = new System.Windows.Forms.PictureBox();
             this.blocSimple4 = new System.Windows.Forms.PictureBox();
             this.blocSimple5 = new System.Windows.Forms.PictureBox();
             this.blocSimple6 = new System.Windows.Forms.PictureBox();
@@ -45,16 +44,17 @@ namespace MiniGames
             this.blocSimple8 = new System.Windows.Forms.PictureBox();
             this.blocSimple9 = new System.Windows.Forms.PictureBox();
             this.blocThin2 = new System.Windows.Forms.PictureBox();
-            this.blocThin3 = new System.Windows.Forms.PictureBox();
-            this.blocThin4 = new System.Windows.Forms.PictureBox();
             this.blocMoving1 = new System.Windows.Forms.PictureBox();
             this.blocMoving2 = new System.Windows.Forms.PictureBox();
+            this.player1 = new System.Windows.Forms.PictureBox();
+            this.blocSimple3 = new System.Windows.Forms.PictureBox();
+            this.blocThin3 = new System.Windows.Forms.PictureBox();
+            this.blocThin4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.timerGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocThin1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blocSimple3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple6)).BeginInit();
@@ -63,10 +63,12 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocThin2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blocThin3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blocThin4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocMoving1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocMoving2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blocSimple3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blocThin3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blocThin4)).BeginInit();
             this.SuspendLayout();
             // 
             // timerGame
@@ -121,18 +123,6 @@ namespace MiniGames
             this.blocThin1.TabIndex = 3;
             this.blocThin1.TabStop = false;
             this.blocThin1.Tag = "bloc";
-            // 
-            // blocSimple3
-            // 
-            this.blocSimple3.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple3.Image = global::MiniGames.Properties.Resources.blocShadow;
-            this.blocSimple3.Location = new System.Drawing.Point(246, 473);
-            this.blocSimple3.Name = "blocSimple3";
-            this.blocSimple3.Size = new System.Drawing.Size(80, 80);
-            this.blocSimple3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.blocSimple3.TabIndex = 4;
-            this.blocSimple3.TabStop = false;
-            this.blocSimple3.Tag = "bloc";
             // 
             // blocSimple4
             // 
@@ -230,30 +220,6 @@ namespace MiniGames
             this.blocThin2.TabStop = false;
             this.blocThin2.Tag = "bloc";
             // 
-            // blocThin3
-            // 
-            this.blocThin3.BackColor = System.Drawing.Color.Transparent;
-            this.blocThin3.Image = global::MiniGames.Properties.Resources.blocShadow;
-            this.blocThin3.Location = new System.Drawing.Point(485, 554);
-            this.blocThin3.Name = "blocThin3";
-            this.blocThin3.Size = new System.Drawing.Size(160, 25);
-            this.blocThin3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.blocThin3.TabIndex = 13;
-            this.blocThin3.TabStop = false;
-            this.blocThin3.Tag = "bloc";
-            // 
-            // blocThin4
-            // 
-            this.blocThin4.BackColor = System.Drawing.Color.Transparent;
-            this.blocThin4.Image = global::MiniGames.Properties.Resources.blocShadow;
-            this.blocThin4.Location = new System.Drawing.Point(674, 246);
-            this.blocThin4.Name = "blocThin4";
-            this.blocThin4.Size = new System.Drawing.Size(160, 25);
-            this.blocThin4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.blocThin4.TabIndex = 14;
-            this.blocThin4.TabStop = false;
-            this.blocThin4.Tag = "bloc";
-            // 
             // blocMoving1
             // 
             this.blocMoving1.BackColor = System.Drawing.Color.Transparent;
@@ -278,16 +244,65 @@ namespace MiniGames
             this.blocMoving2.TabStop = false;
             this.blocMoving2.Tag = "bloc";
             // 
+            // player1
+            // 
+            this.player1.BackColor = System.Drawing.Color.Transparent;
+            this.player1.Image = global::MiniGames.Properties.Resources.cropRat;
+            this.player1.Location = new System.Drawing.Point(38, 246);
+            this.player1.Name = "player1";
+            this.player1.Size = new System.Drawing.Size(80, 80);
+            this.player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.player1.TabIndex = 17;
+            this.player1.TabStop = false;
+            // 
+            // blocSimple3
+            // 
+            this.blocSimple3.BackColor = System.Drawing.Color.Transparent;
+            this.blocSimple3.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSimple3.Location = new System.Drawing.Point(249, 473);
+            this.blocSimple3.Name = "blocSimple3";
+            this.blocSimple3.Size = new System.Drawing.Size(80, 80);
+            this.blocSimple3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blocSimple3.TabIndex = 18;
+            this.blocSimple3.TabStop = false;
+            this.blocSimple3.Tag = "bloc";
+            // 
+            // blocThin3
+            // 
+            this.blocThin3.BackColor = System.Drawing.Color.Transparent;
+            this.blocThin3.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocThin3.Location = new System.Drawing.Point(465, 554);
+            this.blocThin3.Name = "blocThin3";
+            this.blocThin3.Size = new System.Drawing.Size(160, 25);
+            this.blocThin3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blocThin3.TabIndex = 19;
+            this.blocThin3.TabStop = false;
+            this.blocThin3.Tag = "bloc";
+            // 
+            // blocThin4
+            // 
+            this.blocThin4.BackColor = System.Drawing.Color.Transparent;
+            this.blocThin4.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocThin4.Location = new System.Drawing.Point(674, 246);
+            this.blocThin4.Name = "blocThin4";
+            this.blocThin4.Size = new System.Drawing.Size(160, 25);
+            this.blocThin4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.blocThin4.TabIndex = 20;
+            this.blocThin4.TabStop = false;
+            this.blocThin4.Tag = "bloc";
+            // 
             // PlatRat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::MiniGames.Properties.Resources.NNZthjY;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(832, 591);
-            this.Controls.Add(this.blocMoving2);
-            this.Controls.Add(this.blocMoving1);
             this.Controls.Add(this.blocThin4);
             this.Controls.Add(this.blocThin3);
+            this.Controls.Add(this.blocSimple3);
+            this.Controls.Add(this.player1);
+            this.Controls.Add(this.blocMoving2);
+            this.Controls.Add(this.blocMoving1);
             this.Controls.Add(this.blocThin2);
             this.Controls.Add(this.blocSimple9);
             this.Controls.Add(this.blocSimple8);
@@ -296,7 +311,6 @@ namespace MiniGames
             this.Controls.Add(this.blocSimple6);
             this.Controls.Add(this.blocSimple5);
             this.Controls.Add(this.blocSimple4);
-            this.Controls.Add(this.blocSimple3);
             this.Controls.Add(this.blocThin1);
             this.Controls.Add(this.blocSimple2);
             this.Controls.Add(this.blocSimple1);
@@ -312,7 +326,6 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocThin1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blocSimple3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple6)).EndInit();
@@ -321,12 +334,24 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocThin2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blocThin3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blocThin4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocMoving1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocMoving2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blocSimple3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blocThin3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blocThin4)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox blocThin3;
+
+        private System.Windows.Forms.PictureBox blocSimple3;
+
+        private System.Windows.Forms.PictureBox blocThin4;
+
+        private System.Windows.Forms.PictureBox blocThin2;
+
+        private System.Windows.Forms.PictureBox player1;
 
         private System.Windows.Forms.PictureBox blocMoving1;
 
