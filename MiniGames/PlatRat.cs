@@ -88,6 +88,22 @@ namespace MiniGames
                             label1.Text += " test working";
                         }
                     }
+
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Right < control.Right && player1.Top < control.Bottom)
+                    {
+                        label1.Text = "going left";
+                        player1.Left = control.Left - player1.Width;
+                    }
+
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Left > control.Left && player1.Top != control.Bottom && player1.Bottom != control.Top)
+                    {
+                        player1.Left = control.Right;
+                    }
+
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Top > control.Bottom)
+                    {
+                        player1.Top = control.Bottom;
+                    }
                     
                 }
             }
