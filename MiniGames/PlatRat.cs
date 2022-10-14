@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
+using System.Drawing;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -76,11 +77,18 @@ namespace MiniGames
             {
                 if (control.Tag == "bloc")
                 {
-                    if (player1.Bounds.IntersectsWith(control.Bounds) && !Player1Jump)
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && !Player1Jump && player1.Bottom < control.Bottom && player1.Right != control.Left && player1.Left != control.Right)
                     {
                         player1.Top = control.Top - player1.Height;
+                        label1.Text = player1.Bottom.ToString();
+                        label1.Text += control.Bounds.Y.ToString();
+                        
+                        if (player1.Bottom == control.Bounds.Y)
+                        {
+                            label1.Text += " test working";
+                        }
                     }
-
+                    
                 }
             }
         }
