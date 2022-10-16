@@ -50,7 +50,14 @@ namespace MiniGames
             this.blocSimple3 = new System.Windows.Forms.PictureBox();
             this.blocThin3 = new System.Windows.Forms.PictureBox();
             this.blocThin4 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.message = new System.Windows.Forms.Label();
+            this.enemy1 = new System.Windows.Forms.PictureBox();
+            this.enemy2 = new System.Windows.Forms.PictureBox();
+            this.livesCount = new System.Windows.Forms.Label();
+            this.liveIcon = new System.Windows.Forms.PictureBox();
+            this.cheeseIcon = new System.Windows.Forms.PictureBox();
+            this.cheesesCount = new System.Windows.Forms.Label();
+            this.exitDoor = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.timerGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple1)).BeginInit();
@@ -70,6 +77,11 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocThin3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocThin4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liveIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheeseIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitDoor)).BeginInit();
             this.SuspendLayout();
             // 
             // timerGame
@@ -82,9 +94,9 @@ namespace MiniGames
             // background
             // 
             this.background.Image = global::MiniGames.Properties.Resources.NNZthjY;
-            this.background.Location = new System.Drawing.Point(0, 0);
+            this.background.Location = new System.Drawing.Point(0, -2);
             this.background.Name = "background";
-            this.background.Size = new System.Drawing.Size(834, 593);
+            this.background.Size = new System.Drawing.Size(834, 601);
             this.background.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.background.TabIndex = 0;
             this.background.TabStop = false;
@@ -248,7 +260,7 @@ namespace MiniGames
             // 
             this.player1.BackColor = System.Drawing.Color.Transparent;
             this.player1.Image = global::MiniGames.Properties.Resources.cropRat;
-            this.player1.Location = new System.Drawing.Point(38, 246);
+            this.player1.Location = new System.Drawing.Point(90, 270);
             this.player1.Name = "player1";
             this.player1.Size = new System.Drawing.Size(70, 70);
             this.player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -291,12 +303,104 @@ namespace MiniGames
             this.blocThin4.TabStop = false;
             this.blocThin4.Tag = "bloc";
             // 
-            // label1
+            // message
             // 
-            this.label1.Location = new System.Drawing.Point(170, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 40);
-            this.label1.TabIndex = 21;
+            this.message.BackColor = System.Drawing.Color.Transparent;
+            this.message.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.message.ForeColor = System.Drawing.Color.White;
+            this.message.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.message.Location = new System.Drawing.Point(547, 9);
+            this.message.Name = "message";
+            this.message.Size = new System.Drawing.Size(273, 40);
+            this.message.TabIndex = 21;
+            this.message.Text = "test";
+            this.message.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // enemy1
+            // 
+            this.enemy1.BackColor = System.Drawing.Color.Transparent;
+            this.enemy1.Image = global::MiniGames.Properties.Resources._542_5427076_colors_download_settings_cat_pixel_art;
+            this.enemy1.Location = new System.Drawing.Point(376, 196);
+            this.enemy1.Name = "enemy1";
+            this.enemy1.Size = new System.Drawing.Size(50, 50);
+            this.enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enemy1.TabIndex = 22;
+            this.enemy1.TabStop = false;
+            this.enemy1.Tag = "enemy";
+            // 
+            // enemy2
+            // 
+            this.enemy2.BackColor = System.Drawing.Color.Transparent;
+            this.enemy2.Image = global::MiniGames.Properties.Resources._542_5427076_colors_download_settings_cat_pixel_art;
+            this.enemy2.Location = new System.Drawing.Point(386, 423);
+            this.enemy2.Name = "enemy2";
+            this.enemy2.Size = new System.Drawing.Size(50, 50);
+            this.enemy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enemy2.TabIndex = 23;
+            this.enemy2.TabStop = false;
+            this.enemy2.Tag = "enemy";
+            // 
+            // livesCount
+            // 
+            this.livesCount.BackColor = System.Drawing.Color.Transparent;
+            this.livesCount.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.livesCount.ForeColor = System.Drawing.Color.White;
+            this.livesCount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.livesCount.Location = new System.Drawing.Point(204, 10);
+            this.livesCount.Name = "livesCount";
+            this.livesCount.Size = new System.Drawing.Size(43, 40);
+            this.livesCount.TabIndex = 25;
+            this.livesCount.Text = "3";
+            this.livesCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // liveIcon
+            // 
+            this.liveIcon.BackColor = System.Drawing.Color.Transparent;
+            this.liveIcon.Image = global::MiniGames.Properties.Resources.heart_pixel_art_254x254;
+            this.liveIcon.Location = new System.Drawing.Point(158, 10);
+            this.liveIcon.Name = "liveIcon";
+            this.liveIcon.Size = new System.Drawing.Size(40, 40);
+            this.liveIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.liveIcon.TabIndex = 26;
+            this.liveIcon.TabStop = false;
+            this.liveIcon.Tag = "icon";
+            // 
+            // cheeseIcon
+            // 
+            this.cheeseIcon.BackColor = System.Drawing.Color.Transparent;
+            this.cheeseIcon.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheeseIcon.Location = new System.Drawing.Point(249, 12);
+            this.cheeseIcon.Name = "cheeseIcon";
+            this.cheeseIcon.Size = new System.Drawing.Size(40, 40);
+            this.cheeseIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheeseIcon.TabIndex = 27;
+            this.cheeseIcon.TabStop = false;
+            this.cheeseIcon.Tag = "icon";
+            // 
+            // cheesesCount
+            // 
+            this.cheesesCount.BackColor = System.Drawing.Color.Transparent;
+            this.cheesesCount.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cheesesCount.ForeColor = System.Drawing.Color.White;
+            this.cheesesCount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cheesesCount.Location = new System.Drawing.Point(295, 9);
+            this.cheesesCount.Name = "cheesesCount";
+            this.cheesesCount.Size = new System.Drawing.Size(43, 40);
+            this.cheesesCount.TabIndex = 28;
+            this.cheesesCount.Text = "0";
+            this.cheesesCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // exitDoor
+            // 
+            this.exitDoor.BackColor = System.Drawing.Color.Transparent;
+            this.exitDoor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.exitDoor.Location = new System.Drawing.Point(674, 189);
+            this.exitDoor.Name = "exitDoor";
+            this.exitDoor.Size = new System.Drawing.Size(160, 57);
+            this.exitDoor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exitDoor.TabIndex = 29;
+            this.exitDoor.TabStop = false;
+            this.exitDoor.Tag = "";
             // 
             // PlatRat
             // 
@@ -304,7 +408,14 @@ namespace MiniGames
             this.BackgroundImage = global::MiniGames.Properties.Resources.NNZthjY;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(832, 591);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.exitDoor);
+            this.Controls.Add(this.cheesesCount);
+            this.Controls.Add(this.cheeseIcon);
+            this.Controls.Add(this.liveIcon);
+            this.Controls.Add(this.livesCount);
+            this.Controls.Add(this.enemy2);
+            this.Controls.Add(this.enemy1);
+            this.Controls.Add(this.message);
             this.Controls.Add(this.blocThin4);
             this.Controls.Add(this.blocThin3);
             this.Controls.Add(this.blocSimple3);
@@ -327,6 +438,7 @@ namespace MiniGames
             this.Name = "PlatRat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "The rat\'s sewers";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlatRat_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PlatRat_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.PlatRat_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.timerGame)).EndInit();
@@ -348,8 +460,29 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocThin3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocThin4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.liveIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheeseIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitDoor)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox exitDoor;
+
+        private System.Windows.Forms.Label message;
+
+        private System.Windows.Forms.Label cheesesCount;
+
+        private System.Windows.Forms.PictureBox cheeseIcon;
+
+        private System.Windows.Forms.PictureBox liveIcon;
+
+        private System.Windows.Forms.Label livesCount;
+
+        private System.Windows.Forms.PictureBox enemy2;
+
+        private System.Windows.Forms.PictureBox enemy1;
 
         private System.Windows.Forms.Label label1;
 

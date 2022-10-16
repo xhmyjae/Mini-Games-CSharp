@@ -89,4 +89,13 @@
   <data name="reverseCropRat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reverseCropRat.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_542_5427076_colors_download_settings_cat_pixel_art" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_542_5427076_colors_download_settings_cat_pixel_art.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="heart_pixel_art_254x254" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart_pixel_art_254x254.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\_200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

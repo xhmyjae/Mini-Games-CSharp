@@ -62,9 +62,29 @@ namespace MiniGames.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art {
+            get {
+                object obj = ResourceManager.GetObject("_200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _5214_dancing_sphynx_cat {
             get {
                 object obj = ResourceManager.GetObject("_5214_dancing_sphynx_cat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _542_5427076_colors_download_settings_cat_pixel_art {
+            get {
+                object obj = ResourceManager.GetObject("_542_5427076_colors_download_settings_cat_pixel_art", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -115,6 +135,16 @@ namespace MiniGames.Properties {
         internal static System.Drawing.Bitmap goodCheese {
             get {
                 object obj = ResourceManager.GetObject("goodCheese", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heart_pixel_art_254x254 {
+            get {
+                object obj = ResourceManager.GetObject("heart_pixel_art_254x254", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

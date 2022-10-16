@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Timers;
 using System.Windows.Forms;
@@ -9,12 +10,21 @@ namespace MiniGames
     {
         private bool Player1GoLeft, Player1GoRight, Player1Jump;
         private int PlayerSpeed = 5;
+        private int Enemy1Speed = 3;
+        private int Enemy2Speed = 4;
         private int PlayerJumpSpeed = 10;
+        private int Player1Lives = 3;
         private int Score;
-        
+
         public PlatRat()
         {
             InitializeComponent();
+        }
+        
+        private void PlatRat_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1 menu = new Form1();
+            menu.Show();
         }
 
         private void PlatRat_KeyDown(object sender, KeyEventArgs e)
@@ -56,6 +66,15 @@ namespace MiniGames
 
         private void timerGame_Elapsed(object sender, ElapsedEventArgs e)
         {
+            player1.BringToFront();
+            enemy1.BringToFront();
+            enemy2.BringToFront();
+            
+            // Set scores and cheeses Count
+            livesCount.Text = Player1Lives.ToString();
+            cheesesCount.Text = Score.ToString();
+            
+            // Make characters move
             player1.Top += PlayerSpeed;
             
             if (Player1GoLeft && player1.Left > 0)
@@ -75,38 +94,74 @@ namespace MiniGames
 
             foreach (Control control in this.Controls)
             {
+
                 if (control.Tag == "bloc")
                 {
                     if (player1.Bounds.IntersectsWith(control.Bounds) && !Player1Jump && player1.Bottom < control.Bottom && player1.Right != control.Left && player1.Left != control.Right)
                     {
                         player1.Top = control.Top - player1.Height;
-                        label1.Text = player1.Bottom.ToString();
-                        label1.Text += control.Bounds.Y.ToString();
-                        
-                        if (player1.Bottom == control.Bounds.Y)
-                        {
-                            label1.Text += " test working";
-                        }
                     }
-
-                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Right < control.Right && player1.Top < control.Bottom)
-                    {
-                        label1.Text = "going left";
-                        player1.Left = control.Left - player1.Width;
-                    }
-
-                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Left > control.Left && player1.Top != control.Bottom && player1.Bottom != control.Top)
-                    {
-                        player1.Left = control.Right;
-                    }
-
-                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Top > control.Bottom)
+                    
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Top > control.Top)
                     {
                         player1.Top = control.Bottom;
                     }
-                    
+
+                    // if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Right < control.Right && !HitTop && !HitBottom)
+                    // {
+                    //     player1.Left = control.Left - player1.Width;
+                    // }
+                    //
+                    // if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Left > control.Left && !HitTop && !HitBottom)
+                    // {
+                    //     player1.Left = control.Right;
+                    // }
+
                 }
             }
+            
+            // Make enemies move
+            enemy1.Left += Enemy1Speed;
+            if (enemy1.Right >= blocSimple6.Right || enemy1.Left <= blocSimple5.Left)
+            {
+                Enemy1Speed = -Enemy1Speed;
+            }
+
+            enemy2.Left += Enemy2Speed;
+            if (enemy2.Right >= blocThin2.Right || enemy2.Left <= blocSimple3.Left)
+            {
+                Enemy2Speed = -Enemy2Speed;
+            }
+            
+            // Hit enemies
+            foreach (Control control in this.Controls)
+            {
+                if (control.Tag == "enemy")
+                {
+                    if (player1.Bounds.IntersectsWith(control.Bounds))
+                    {
+                        Player1Lives--;
+                    }
+                }
+            }
+
+            // Check lose
+            if (Player1Lives == 0)
+            {
+                // End game with lose
+            } 
+            
+            // Check win
+            if (player1.Bounds.IntersectsWith(exitDoor.Bounds))
+            {
+                if (Score == 9)
+                {
+                    // End game with win
+                }
+
+                message.Text = "I need more cheese for my family.";
+            }
         }
+        
     }
 }
