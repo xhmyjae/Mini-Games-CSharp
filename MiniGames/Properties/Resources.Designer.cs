@@ -92,6 +92,16 @@ namespace MiniGames.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _572_5727123_bread_cat_pixel_art_clipart_png_download_overwatch {
+            get {
+                object obj = ResourceManager.GetObject("_572_5727123_bread_cat_pixel_art_clipart_png_download_overwatch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bloc {
             get {
                 object obj = ResourceManager.GetObject("bloc", resourceCulture);

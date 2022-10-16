@@ -58,6 +58,7 @@ namespace MiniGames
             this.cheeseIcon = new System.Windows.Forms.PictureBox();
             this.cheesesCount = new System.Windows.Forms.Label();
             this.exitDoor = new System.Windows.Forms.PictureBox();
+            this.timeOffEnemies = new System.Timers.Timer();
             ((System.ComponentModel.ISupportInitialize)(this.timerGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple1)).BeginInit();
@@ -82,6 +83,7 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.liveIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheeseIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitDoor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeOffEnemies)).BeginInit();
             this.SuspendLayout();
             // 
             // timerGame
@@ -402,6 +404,12 @@ namespace MiniGames
             this.exitDoor.TabStop = false;
             this.exitDoor.Tag = "";
             // 
+            // timeOffEnemies
+            // 
+            this.timeOffEnemies.AutoReset = false;
+            this.timeOffEnemies.Interval = 3000D;
+            this.timeOffEnemies.SynchronizingObject = this;
+            // 
             // PlatRat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -465,8 +473,11 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.liveIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cheeseIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitDoor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeOffEnemies)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Timers.Timer timeOffEnemies;
 
         private System.Windows.Forms.PictureBox exitDoor;
 

@@ -121,6 +121,7 @@
       <Content Include="Resources\_200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art.png" />
       <Content Include="Resources\_5214_dancing_sphynx_cat.gif" />
       <Content Include="Resources\_542_5427076_colors_download_settings_cat_pixel_art.png" />
+      <Content Include="Resources\_572_5727123_bread_cat_pixel_art_clipart_png_download_overwatch.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

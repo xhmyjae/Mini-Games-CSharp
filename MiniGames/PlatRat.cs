@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Threading;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -69,7 +70,8 @@ namespace MiniGames
             player1.BringToFront();
             enemy1.BringToFront();
             enemy2.BringToFront();
-            
+            message.Text = "";
+
             // Set scores and cheeses Count
             livesCount.Text = Player1Lives.ToString();
             cheesesCount.Text = Score.ToString();
@@ -138,9 +140,12 @@ namespace MiniGames
             {
                 if (control.Tag == "enemy")
                 {
-                    if (player1.Bounds.IntersectsWith(control.Bounds))
+                    if (player1.Bounds.IntersectsWith(enemy1.Bounds))
                     {
                         Player1Lives--;
+                        TimeOffEnemies(enemy1);
+                        enemy1.Enabled = true;
+                        enemy1.Image = Properties.Resources._542_5427076_colors_download_settings_cat_pixel_art;
                     }
                 }
             }
@@ -161,6 +166,13 @@ namespace MiniGames
 
                 message.Text = "I need more cheese for my family.";
             }
+        }
+
+        private void TimeOffEnemies(PictureBox box)
+        {
+            timeOffEnemies.Start();
+            box.Enabled = false;
+            box.Image = Properties.Resources._572_5727123_bread_cat_pixel_art_clipart_png_download_overwatch;
         }
         
     }
