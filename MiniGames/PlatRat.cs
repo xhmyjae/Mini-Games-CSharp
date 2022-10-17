@@ -75,9 +75,10 @@ namespace MiniGames
             if (TouchedEnemies)
             {
                 EnemiesTimer += 10;
-                if (EnemiesTimer >= 3000)
+                if (EnemiesTimer >= 700)
                 {
                     enableEnemies(enemy1);
+                    enableEnemies(enemy2);
                     TouchedEnemies = false;
                 }
             }
@@ -133,16 +134,19 @@ namespace MiniGames
             }
             
             // Make enemies move
-            enemy1.Left += Enemy1Speed;
-            if (enemy1.Right >= blocSimple6.Right || enemy1.Left <= blocSimple5.Left)
+            if (!TouchedEnemies)
             {
-                Enemy1Speed = -Enemy1Speed;
-            }
+                enemy1.Left += Enemy1Speed;
+                if (enemy1.Right >= blocSimple6.Right || enemy1.Left <= blocSimple5.Left)
+                {
+                    Enemy1Speed = -Enemy1Speed;
+                }
 
-            enemy2.Left += Enemy2Speed;
-            if (enemy2.Right >= blocThin2.Right || enemy2.Left <= blocSimple3.Left)
-            {
-                Enemy2Speed = -Enemy2Speed;
+                enemy2.Left += Enemy2Speed;
+                if (enemy2.Right >= blocThin2.Right || enemy2.Left <= blocSimple3.Left)
+                {
+                    Enemy2Speed = -Enemy2Speed;
+                }
             }
             
             // Hit enemies
@@ -155,6 +159,15 @@ namespace MiniGames
                         EnemiesTimer = 0;
                         TouchedEnemies = true;
                         disableEnemies(enemy1);
+                        disableEnemies(enemy2);
+                        Player1Lives--;
+                    }
+                    if (player1.Bounds.IntersectsWith(enemy2.Bounds) && !TouchedEnemies)
+                    {
+                        EnemiesTimer = 0;
+                        TouchedEnemies = true;
+                        disableEnemies(enemy1);
+                        disableEnemies(enemy2);
                         Player1Lives--;
                     }
                 }
