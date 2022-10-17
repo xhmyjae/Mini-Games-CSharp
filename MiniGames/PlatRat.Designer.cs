@@ -281,9 +281,9 @@ namespace MiniGames
             // 
             this.player1.BackColor = System.Drawing.Color.Transparent;
             this.player1.Image = global::MiniGames.Properties.Resources.cropRat;
-            this.player1.Location = new System.Drawing.Point(90, 270);
+            this.player1.Location = new System.Drawing.Point(12, 296);
             this.player1.Name = "player1";
-            this.player1.Size = new System.Drawing.Size(70, 70);
+            this.player1.Size = new System.Drawing.Size(50, 50);
             this.player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player1.TabIndex = 17;
             this.player1.TabStop = false;
@@ -334,7 +334,6 @@ namespace MiniGames
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(273, 40);
             this.message.TabIndex = 21;
-            this.message.Text = "test";
             this.message.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // enemy1

@@ -13,7 +13,7 @@ namespace MiniGames
         private int PlayerSpeed = 5;
         private int Enemy1Speed = 3;
         private int Enemy2Speed = 4;
-        private int PlayerJumpSpeed = 10;
+        private int PlayerJumpSpeed = 30;
         private int Player1Lives = 3;
         private int EnemiesTimer = 0;
         private int Score;
@@ -115,20 +115,20 @@ namespace MiniGames
                         player1.Top = control.Top - player1.Height;
                     }
                     
-                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Top > control.Top)
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Top > control.Top && player1.Right != control.Left && player1.Left != control.Right)
                     {
                         player1.Top = control.Bottom;
                     }
 
-                    // if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Right < control.Right && !HitTop && !HitBottom)
-                    // {
-                    //     player1.Left = control.Left - player1.Width;
-                    // }
-                    //
-                    // if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Left > control.Left && !HitTop && !HitBottom)
-                    // {
-                    //     player1.Left = control.Right;
-                    // }
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Right < control.Right && player1.Left < control.Left)
+                    {
+                        player1.Left = control.Left - player1.Width;
+                    }
+                    
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Left > control.Left && player1.Right > control.Right)
+                    {
+                        player1.Left = control.Right;
+                    }
 
                 }
             }
