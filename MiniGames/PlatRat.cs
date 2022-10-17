@@ -9,12 +9,13 @@ namespace MiniGames
 {
     public partial class PlatRat : Form
     {
-        private bool Player1GoLeft, Player1GoRight, Player1Jump;
+        private bool Player1GoLeft, Player1GoRight, Player1Jump, TouchedEnemies;
         private int PlayerSpeed = 5;
         private int Enemy1Speed = 3;
         private int Enemy2Speed = 4;
         private int PlayerJumpSpeed = 10;
         private int Player1Lives = 3;
+        private int EnemiesTimer = 0;
         private int Score;
 
         public PlatRat()
@@ -71,6 +72,15 @@ namespace MiniGames
             enemy1.BringToFront();
             enemy2.BringToFront();
             message.Text = "";
+            if (TouchedEnemies)
+            {
+                EnemiesTimer += 10;
+                if (EnemiesTimer >= 3000)
+                {
+                    enableEnemies(enemy1);
+                    TouchedEnemies = false;
+                }
+            }
 
             // Set scores and cheeses Count
             livesCount.Text = Player1Lives.ToString();
@@ -140,12 +150,12 @@ namespace MiniGames
             {
                 if (control.Tag == "enemy")
                 {
-                    if (player1.Bounds.IntersectsWith(enemy1.Bounds))
+                    if (player1.Bounds.IntersectsWith(enemy1.Bounds) && !TouchedEnemies)
                     {
+                        EnemiesTimer = 0;
+                        TouchedEnemies = true;
+                        disableEnemies(enemy1);
                         Player1Lives--;
-                        TimeOffEnemies(enemy1);
-                        enemy1.Enabled = true;
-                        enemy1.Image = Properties.Resources._542_5427076_colors_download_settings_cat_pixel_art;
                     }
                 }
             }
@@ -168,11 +178,18 @@ namespace MiniGames
             }
         }
 
-        private void TimeOffEnemies(PictureBox box)
+        private void disableEnemies(PictureBox box)
         {
-            timeOffEnemies.Start();
+            label1.Text = "disable enemies";
             box.Enabled = false;
             box.Image = Properties.Resources._572_5727123_bread_cat_pixel_art_clipart_png_download_overwatch;
+        }
+
+        private void enableEnemies(PictureBox box)
+        {
+            label1.Text = "enable enemies";
+            box.Enabled = true;
+            box.Image = Properties.Resources._542_5427076_colors_download_settings_cat_pixel_art;
         }
         
     }

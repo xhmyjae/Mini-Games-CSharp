@@ -59,6 +59,7 @@ namespace MiniGames
             this.cheesesCount = new System.Windows.Forms.Label();
             this.exitDoor = new System.Windows.Forms.PictureBox();
             this.timeOffEnemies = new System.Timers.Timer();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.timerGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple1)).BeginInit();
@@ -407,8 +408,15 @@ namespace MiniGames
             // timeOffEnemies
             // 
             this.timeOffEnemies.AutoReset = false;
-            this.timeOffEnemies.Interval = 3000D;
+            this.timeOffEnemies.Interval = 10000D;
             this.timeOffEnemies.SynchronizingObject = this;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(611, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 45);
+            this.label1.TabIndex = 30;
             // 
             // PlatRat
             // 
@@ -416,6 +424,7 @@ namespace MiniGames
             this.BackgroundImage = global::MiniGames.Properties.Resources.NNZthjY;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(832, 591);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.exitDoor);
             this.Controls.Add(this.cheesesCount);
             this.Controls.Add(this.cheeseIcon);
