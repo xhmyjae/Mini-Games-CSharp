@@ -9,11 +9,11 @@ namespace MiniGames
 {
     public partial class PlatRat : Form
     {
-        private bool Player1GoLeft, Player1GoRight, Player1Jump, TouchedEnemies;
+        private bool Player1GoLeft, Player1GoRight, Player1Jump, TouchedEnemies, Player1OnGround;
         private int PlayerSpeed = 5;
         private int Enemy1Speed = 3;
         private int Enemy2Speed = 4;
-        private int PlayerJumpSpeed = 30;
+        private int PlayerJumpSpeed = 100;
         private int Player1Lives = 3;
         private int EnemiesTimer = 0;
         private int Score;
@@ -60,9 +60,9 @@ namespace MiniGames
                 case Keys.Left :
                     Player1GoLeft = false;
                     break;
-                case Keys.Up :
-                    Player1Jump = false;
-                    break;
+                // case Keys.Up :
+                //     Player1Jump = false;
+                //     break;
             }
         }
 
@@ -100,10 +100,10 @@ namespace MiniGames
                 player1.Left += PlayerSpeed;
             }
 
-            if (Player1Jump)
+            if (Player1Jump && Player1OnGround)
             {
                 player1.Top -= PlayerJumpSpeed;
-                Player1Jump = false;
+                Player1OnGround = false;
             }
 
             foreach (Control control in this.Controls)
@@ -129,6 +129,13 @@ namespace MiniGames
                     if (player1.Bounds.IntersectsWith(control.Bounds) && player1.Left > control.Left && player1.Right > control.Right)
                     {
                         player1.Left = control.Right;
+                    }
+                    
+                    // Makes player jump
+                    if (player1.Bottom == control.Top)
+                    {
+                        Player1OnGround = true;
+                        Player1Jump = false;
                     }
 
                 }
