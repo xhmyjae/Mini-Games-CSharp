@@ -103,6 +103,7 @@ namespace MiniGames
             if (Player1Jump)
             {
                 player1.Top -= PlayerJumpSpeed;
+                Player1Jump = false;
             }
 
             foreach (Control control in this.Controls)
