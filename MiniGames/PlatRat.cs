@@ -154,15 +154,7 @@ namespace MiniGames
             {
                 if (control.Tag == "enemy")
                 {
-                    if (player1.Bounds.IntersectsWith(enemy1.Bounds) && !TouchedEnemies)
-                    {
-                        EnemiesTimer = 0;
-                        TouchedEnemies = true;
-                        disableEnemies(enemy1);
-                        disableEnemies(enemy2);
-                        Player1Lives--;
-                    }
-                    if (player1.Bounds.IntersectsWith(enemy2.Bounds) && !TouchedEnemies)
+                    if (player1.Bounds.IntersectsWith(control.Bounds) && !TouchedEnemies)
                     {
                         EnemiesTimer = 0;
                         TouchedEnemies = true;
@@ -171,11 +163,23 @@ namespace MiniGames
                         Player1Lives--;
                     }
                 }
+                
+                // Grab cheeses
+                if (control.Tag == "cheese")
+                {
+                    if (player1.Bounds.IntersectsWith(control.Bounds))
+                    {
+                        this.Controls.Remove(control);
+                        Score++;
+                    }
+                }
             }
+            
 
             // Check lose
-            if (Player1Lives == 0)
+            if (Player1Lives == 0 || player1.Bottom == this.ClientSize.Height)
             {
+                label1.Text = "Lose";
                 // End game with lose
             } 
             
@@ -184,23 +188,24 @@ namespace MiniGames
             {
                 if (Score == 9)
                 {
+                    label1.Text = "Win";
                     // End game with win
                 }
-
-                message.Text = "I need more cheese for my family.";
+                else
+                {
+                    message.Text = "I need more cheese for my family.";
+                }
             }
         }
 
         private void disableEnemies(PictureBox box)
         {
-            label1.Text = "disable enemies";
             box.Enabled = false;
             box.Image = Properties.Resources._572_5727123_bread_cat_pixel_art_clipart_png_download_overwatch;
         }
 
         private void enableEnemies(PictureBox box)
         {
-            label1.Text = "enable enemies";
             box.Enabled = true;
             box.Image = Properties.Resources._542_5427076_colors_download_settings_cat_pixel_art;
         }

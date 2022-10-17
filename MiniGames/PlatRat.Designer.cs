@@ -60,6 +60,15 @@ namespace MiniGames
             this.exitDoor = new System.Windows.Forms.PictureBox();
             this.timeOffEnemies = new System.Timers.Timer();
             this.label1 = new System.Windows.Forms.Label();
+            this.cheese1 = new System.Windows.Forms.PictureBox();
+            this.cheese2 = new System.Windows.Forms.PictureBox();
+            this.cheese3 = new System.Windows.Forms.PictureBox();
+            this.cheese4 = new System.Windows.Forms.PictureBox();
+            this.cheese5 = new System.Windows.Forms.PictureBox();
+            this.cheese6 = new System.Windows.Forms.PictureBox();
+            this.cheese7 = new System.Windows.Forms.PictureBox();
+            this.cheese8 = new System.Windows.Forms.PictureBox();
+            this.cheese9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.timerGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blocSimple1)).BeginInit();
@@ -85,6 +94,15 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.cheeseIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitDoor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeOffEnemies)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese9)).BeginInit();
             this.SuspendLayout();
             // 
             // timerGame
@@ -418,12 +436,129 @@ namespace MiniGames
             this.label1.Size = new System.Drawing.Size(208, 45);
             this.label1.TabIndex = 30;
             // 
+            // cheese1
+            // 
+            this.cheese1.BackColor = System.Drawing.Color.Transparent;
+            this.cheese1.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheese1.Location = new System.Drawing.Point(23, 42);
+            this.cheese1.Name = "cheese1";
+            this.cheese1.Size = new System.Drawing.Size(34, 34);
+            this.cheese1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheese1.TabIndex = 31;
+            this.cheese1.TabStop = false;
+            this.cheese1.Tag = "cheese";
+            // 
+            // cheese2
+            // 
+            this.cheese2.BackColor = System.Drawing.Color.Transparent;
+            this.cheese2.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheese2.Location = new System.Drawing.Point(195, 121);
+            this.cheese2.Name = "cheese2";
+            this.cheese2.Size = new System.Drawing.Size(34, 34);
+            this.cheese2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheese2.TabIndex = 32;
+            this.cheese2.TabStop = false;
+            this.cheese2.Tag = "cheese";
+            // 
+            // cheese3
+            // 
+            this.cheese3.BackColor = System.Drawing.Color.Transparent;
+            this.cheese3.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheese3.Location = new System.Drawing.Point(326, 206);
+            this.cheese3.Name = "cheese3";
+            this.cheese3.Size = new System.Drawing.Size(34, 34);
+            this.cheese3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheese3.TabIndex = 33;
+            this.cheese3.TabStop = false;
+            this.cheese3.Tag = "cheese";
+            // 
+            // cheese4
+            // 
+            this.cheese4.BackColor = System.Drawing.Color.Transparent;
+            this.cheese4.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheese4.Location = new System.Drawing.Point(392, 42);
+            this.cheese4.Name = "cheese4";
+            this.cheese4.Size = new System.Drawing.Size(34, 34);
+            this.cheese4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheese4.TabIndex = 34;
+            this.cheese4.TabStop = false;
+            this.cheese4.Tag = "cheese";
+            // 
+            // cheese5
+            // 
+            this.cheese5.BackColor = System.Drawing.Color.Transparent;
+            this.cheese5.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheese5.Location = new System.Drawing.Point(742, 42);
+            this.cheese5.Name = "cheese5";
+            this.cheese5.Size = new System.Drawing.Size(34, 34);
+            this.cheese5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheese5.TabIndex = 35;
+            this.cheese5.TabStop = false;
+            this.cheese5.Tag = "cheese";
+            // 
+            // cheese6
+            // 
+            this.cheese6.BackColor = System.Drawing.Color.Transparent;
+            this.cheese6.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheese6.Location = new System.Drawing.Point(23, 514);
+            this.cheese6.Name = "cheese6";
+            this.cheese6.Size = new System.Drawing.Size(34, 34);
+            this.cheese6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheese6.TabIndex = 36;
+            this.cheese6.TabStop = false;
+            this.cheese6.Tag = "cheese";
+            // 
+            // cheese7
+            // 
+            this.cheese7.BackColor = System.Drawing.Color.Transparent;
+            this.cheese7.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheese7.Location = new System.Drawing.Point(274, 433);
+            this.cheese7.Name = "cheese7";
+            this.cheese7.Size = new System.Drawing.Size(34, 34);
+            this.cheese7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheese7.TabIndex = 37;
+            this.cheese7.TabStop = false;
+            this.cheese7.Tag = "cheese";
+            // 
+            // cheese8
+            // 
+            this.cheese8.BackColor = System.Drawing.Color.Transparent;
+            this.cheese8.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheese8.Location = new System.Drawing.Point(531, 514);
+            this.cheese8.Name = "cheese8";
+            this.cheese8.Size = new System.Drawing.Size(34, 34);
+            this.cheese8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheese8.TabIndex = 38;
+            this.cheese8.TabStop = false;
+            this.cheese8.Tag = "cheese";
+            // 
+            // cheese9
+            // 
+            this.cheese9.BackColor = System.Drawing.Color.Transparent;
+            this.cheese9.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
+            this.cheese9.Location = new System.Drawing.Point(776, 540);
+            this.cheese9.Name = "cheese9";
+            this.cheese9.Size = new System.Drawing.Size(34, 34);
+            this.cheese9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cheese9.TabIndex = 39;
+            this.cheese9.TabStop = false;
+            this.cheese9.Tag = "cheese";
+            // 
             // PlatRat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::MiniGames.Properties.Resources.NNZthjY;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(832, 591);
+            this.Controls.Add(this.cheese9);
+            this.Controls.Add(this.cheese8);
+            this.Controls.Add(this.cheese7);
+            this.Controls.Add(this.cheese6);
+            this.Controls.Add(this.cheese5);
+            this.Controls.Add(this.cheese4);
+            this.Controls.Add(this.cheese3);
+            this.Controls.Add(this.cheese2);
+            this.Controls.Add(this.cheese1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitDoor);
             this.Controls.Add(this.cheesesCount);
@@ -483,8 +618,34 @@ namespace MiniGames
             ((System.ComponentModel.ISupportInitialize)(this.cheeseIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitDoor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeOffEnemies)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cheese9)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox cheese1;
+
+        private System.Windows.Forms.PictureBox cheese7;
+
+        private System.Windows.Forms.PictureBox cheese8;
+
+        private System.Windows.Forms.PictureBox cheese6;
+
+        private System.Windows.Forms.PictureBox cheese5;
+        private System.Windows.Forms.PictureBox cheese4;
+
+        private System.Windows.Forms.PictureBox cheese9;
+
+        private System.Windows.Forms.PictureBox cheese2;
+
+        private System.Windows.Forms.PictureBox cheese3;
 
         private System.Timers.Timer timeOffEnemies;
 
