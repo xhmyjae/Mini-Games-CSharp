@@ -182,6 +182,16 @@ namespace MiniGames.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pipe {
+            get {
+                object obj = ResourceManager.GetObject("pipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rat {
             get {
                 object obj = ResourceManager.GetObject("rat", resourceCulture);

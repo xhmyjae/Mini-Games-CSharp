@@ -124,7 +124,7 @@ namespace MiniGames
             // blocSimple1
             // 
             this.blocSimple1.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple1.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSimple1.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocSimple1.Location = new System.Drawing.Point(0, 346);
             this.blocSimple1.Name = "blocSimple1";
             this.blocSimple1.Size = new System.Drawing.Size(80, 80);
@@ -136,7 +136,7 @@ namespace MiniGames
             // blocSimple2
             // 
             this.blocSimple2.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple2.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSimple2.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocSimple2.Location = new System.Drawing.Point(80, 346);
             this.blocSimple2.Name = "blocSimple2";
             this.blocSimple2.Size = new System.Drawing.Size(80, 80);
@@ -148,7 +148,7 @@ namespace MiniGames
             // blocThin1
             // 
             this.blocThin1.BackColor = System.Drawing.Color.Transparent;
-            this.blocThin1.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocThin1.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocThin1.Location = new System.Drawing.Point(0, 554);
             this.blocThin1.Name = "blocThin1";
             this.blocThin1.Size = new System.Drawing.Size(160, 25);
@@ -160,7 +160,7 @@ namespace MiniGames
             // blocSimple4
             // 
             this.blocSimple4.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple4.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSimple4.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocSimple4.Location = new System.Drawing.Point(0, 82);
             this.blocSimple4.Name = "blocSimple4";
             this.blocSimple4.Size = new System.Drawing.Size(80, 80);
@@ -172,7 +172,7 @@ namespace MiniGames
             // blocSimple5
             // 
             this.blocSimple5.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple5.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSimple5.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocSimple5.Location = new System.Drawing.Point(290, 246);
             this.blocSimple5.Name = "blocSimple5";
             this.blocSimple5.Size = new System.Drawing.Size(80, 80);
@@ -184,7 +184,7 @@ namespace MiniGames
             // blocSimple6
             // 
             this.blocSimple6.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple6.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSimple6.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocSimple6.Location = new System.Drawing.Point(367, 246);
             this.blocSimple6.Name = "blocSimple6";
             this.blocSimple6.Size = new System.Drawing.Size(80, 80);
@@ -196,7 +196,7 @@ namespace MiniGames
             // blocSimple7
             // 
             this.blocSimple7.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple7.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSimple7.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocSimple7.Location = new System.Drawing.Point(367, 82);
             this.blocSimple7.Name = "blocSimple7";
             this.blocSimple7.Size = new System.Drawing.Size(80, 80);
@@ -208,7 +208,7 @@ namespace MiniGames
             // blocSpecial1
             // 
             this.blocSpecial1.BackColor = System.Drawing.Color.Transparent;
-            this.blocSpecial1.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSpecial1.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocSpecial1.Location = new System.Drawing.Point(443, 82);
             this.blocSpecial1.Name = "blocSpecial1";
             this.blocSpecial1.Size = new System.Drawing.Size(80, 80);
@@ -220,7 +220,7 @@ namespace MiniGames
             // blocSimple8
             // 
             this.blocSimple8.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple8.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSimple8.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocSimple8.Location = new System.Drawing.Point(754, 246);
             this.blocSimple8.Name = "blocSimple8";
             this.blocSimple8.Size = new System.Drawing.Size(80, 80);
@@ -243,7 +243,7 @@ namespace MiniGames
             // blocThin2
             // 
             this.blocThin2.BackColor = System.Drawing.Color.Transparent;
-            this.blocThin2.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocThin2.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocThin2.Location = new System.Drawing.Point(326, 473);
             this.blocThin2.Name = "blocThin2";
             this.blocThin2.Size = new System.Drawing.Size(160, 25);
@@ -255,7 +255,7 @@ namespace MiniGames
             // blocMoving1
             // 
             this.blocMoving1.BackColor = System.Drawing.Color.Transparent;
-            this.blocMoving1.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocMoving1.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocMoving1.Location = new System.Drawing.Point(158, 161);
             this.blocMoving1.Name = "blocMoving1";
             this.blocMoving1.Size = new System.Drawing.Size(114, 25);
@@ -267,7 +267,7 @@ namespace MiniGames
             // blocMoving2
             // 
             this.blocMoving2.BackColor = System.Drawing.Color.Transparent;
-            this.blocMoving2.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocMoving2.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocMoving2.Location = new System.Drawing.Point(531, 296);
             this.blocMoving2.Name = "blocMoving2";
             this.blocMoving2.Size = new System.Drawing.Size(114, 25);
@@ -290,7 +290,7 @@ namespace MiniGames
             // blocSimple3
             // 
             this.blocSimple3.BackColor = System.Drawing.Color.Transparent;
-            this.blocSimple3.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocSimple3.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocSimple3.Location = new System.Drawing.Point(249, 473);
             this.blocSimple3.Name = "blocSimple3";
             this.blocSimple3.Size = new System.Drawing.Size(80, 80);
@@ -302,7 +302,7 @@ namespace MiniGames
             // blocThin3
             // 
             this.blocThin3.BackColor = System.Drawing.Color.Transparent;
-            this.blocThin3.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocThin3.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocThin3.Location = new System.Drawing.Point(465, 554);
             this.blocThin3.Name = "blocThin3";
             this.blocThin3.Size = new System.Drawing.Size(160, 25);
@@ -314,7 +314,7 @@ namespace MiniGames
             // blocThin4
             // 
             this.blocThin4.BackColor = System.Drawing.Color.Transparent;
-            this.blocThin4.Image = global::MiniGames.Properties.Resources.blocShadow;
+            this.blocThin4.Image = global::MiniGames.Properties.Resources.pipe;
             this.blocThin4.Location = new System.Drawing.Point(674, 246);
             this.blocThin4.Name = "blocThin4";
             this.blocThin4.Size = new System.Drawing.Size(160, 25);
