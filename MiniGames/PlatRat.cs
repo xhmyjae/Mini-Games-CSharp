@@ -43,11 +43,11 @@ namespace MiniGames
             {
                 case Keys.Right :
                     Player1IsRight = true;
-                    player1.Image = Properties.Resources.cropRat;
+                    player1.Image = Properties.Resources.ratBrown;
                     break;
                 case Keys.Left :
                     Player1IsLeft = true;
-                    player1.Image = Properties.Resources.reverseCropRat;
+                    player1.Image = Properties.Resources.ratBrownReverse;
                     break;
                 case Keys.Up :
                     if (!Player1IsJumping)
@@ -199,13 +199,13 @@ namespace MiniGames
             
             // Makes platform move
             blocMoving1.Top += Bloc1Speed;
-            if (blocMoving1.Top <= 150 || blocMoving1.Bottom >= 310)
+            if (blocMoving1.Top <= 140 || blocMoving1.Bottom >= 310)
             {
                 Bloc1Speed = -Bloc1Speed;
             }
 
             blocMoving2.Top += Bloc2Speed;
-            if (blocMoving2.Top <= 296 || blocMoving2.Bottom >= 425)
+            if (blocMoving2.Top <= 290 || blocMoving2.Bottom >= 425)
             {
                 Bloc2Speed = -Bloc2Speed;
             }

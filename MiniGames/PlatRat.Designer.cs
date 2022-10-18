@@ -208,7 +208,7 @@ namespace MiniGames
             // blocSpecial1
             // 
             this.blocSpecial1.BackColor = System.Drawing.Color.Transparent;
-            this.blocSpecial1.Image = global::MiniGames.Properties.Resources.pipe;
+            this.blocSpecial1.Image = global::MiniGames.Properties.Resources.pipeBrown;
             this.blocSpecial1.Location = new System.Drawing.Point(443, 82);
             this.blocSpecial1.Name = "blocSpecial1";
             this.blocSpecial1.Size = new System.Drawing.Size(80, 80);
@@ -255,7 +255,7 @@ namespace MiniGames
             // blocMoving1
             // 
             this.blocMoving1.BackColor = System.Drawing.Color.Transparent;
-            this.blocMoving1.Image = global::MiniGames.Properties.Resources.pipe;
+            this.blocMoving1.Image = global::MiniGames.Properties.Resources.pipeBrown;
             this.blocMoving1.Location = new System.Drawing.Point(158, 161);
             this.blocMoving1.Name = "blocMoving1";
             this.blocMoving1.Size = new System.Drawing.Size(114, 25);
@@ -267,7 +267,7 @@ namespace MiniGames
             // blocMoving2
             // 
             this.blocMoving2.BackColor = System.Drawing.Color.Transparent;
-            this.blocMoving2.Image = global::MiniGames.Properties.Resources.pipe;
+            this.blocMoving2.Image = global::MiniGames.Properties.Resources.pipeBrown;
             this.blocMoving2.Location = new System.Drawing.Point(531, 296);
             this.blocMoving2.Name = "blocMoving2";
             this.blocMoving2.Size = new System.Drawing.Size(114, 25);
@@ -279,10 +279,10 @@ namespace MiniGames
             // player1
             // 
             this.player1.BackColor = System.Drawing.Color.Transparent;
-            this.player1.Image = global::MiniGames.Properties.Resources.cropRat;
-            this.player1.Location = new System.Drawing.Point(12, 296);
+            this.player1.Image = global::MiniGames.Properties.Resources.ratBrown;
+            this.player1.Location = new System.Drawing.Point(12, 313);
             this.player1.Name = "player1";
-            this.player1.Size = new System.Drawing.Size(50, 50);
+            this.player1.Size = new System.Drawing.Size(77, 33);
             this.player1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player1.TabIndex = 17;
             this.player1.TabStop = false;
