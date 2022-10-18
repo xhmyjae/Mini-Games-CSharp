@@ -59,7 +59,6 @@ namespace MiniGames
             this.cheesesCount = new System.Windows.Forms.Label();
             this.exitDoor = new System.Windows.Forms.PictureBox();
             this.timeOffEnemies = new System.Timers.Timer();
-            this.label1 = new System.Windows.Forms.Label();
             this.cheese1 = new System.Windows.Forms.PictureBox();
             this.cheese2 = new System.Windows.Forms.PictureBox();
             this.cheese3 = new System.Windows.Forms.PictureBox();
@@ -269,7 +268,7 @@ namespace MiniGames
             // 
             this.blocMoving2.BackColor = System.Drawing.Color.Transparent;
             this.blocMoving2.Image = global::MiniGames.Properties.Resources.blocShadow;
-            this.blocMoving2.Location = new System.Drawing.Point(531, 401);
+            this.blocMoving2.Location = new System.Drawing.Point(531, 296);
             this.blocMoving2.Name = "blocMoving2";
             this.blocMoving2.Size = new System.Drawing.Size(114, 25);
             this.blocMoving2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -428,13 +427,6 @@ namespace MiniGames
             this.timeOffEnemies.Interval = 10000D;
             this.timeOffEnemies.SynchronizingObject = this;
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(611, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 45);
-            this.label1.TabIndex = 30;
-            // 
             // cheese1
             // 
             this.cheese1.BackColor = System.Drawing.Color.Transparent;
@@ -558,7 +550,6 @@ namespace MiniGames
             this.Controls.Add(this.cheese3);
             this.Controls.Add(this.cheese2);
             this.Controls.Add(this.cheese1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.exitDoor);
             this.Controls.Add(this.cheesesCount);
             this.Controls.Add(this.cheeseIcon);
@@ -663,8 +654,6 @@ namespace MiniGames
         private System.Windows.Forms.PictureBox enemy2;
 
         private System.Windows.Forms.PictureBox enemy1;
-
-        private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.PictureBox blocThin3;
 

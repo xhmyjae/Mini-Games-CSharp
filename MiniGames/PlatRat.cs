@@ -10,16 +10,20 @@ namespace MiniGames
 {
     public partial class PlatRat : Form
     {
-        private bool Player1IsLeft, Player1IsRight, Player1IsJumping, IsTouchingEnemies, Player1IsOnGround;
+        private bool Player1IsLeft, Player1IsRight, Player1IsJumping, IsTouchingEnemies, Player1IsOnSpecial;
         private int Player1Speed = 5;
-        private int Player1JumpSpeed = 15;
+        private int Player1JumpSpeed = 17;
         private int Force;
-        private int Player1Lives = 3;
+        private int Player1Lives = 2;
 
         private int Enemy1Speed = 3;
         private int Enemy2Speed = 4;
         private int EnemiesTimer = 0;
-        
+
+        private int Bloc1Speed = 2;
+        private int Bloc2Speed = 2;
+        private int BlocSpecialSpeed = 2;
+
         private int Score;
 
         public PlatRat()
@@ -65,9 +69,6 @@ namespace MiniGames
                 case Keys.Left :
                     Player1IsLeft = false;
                     break;
-                // case Keys.Up :
-                //     Player1Jump = false;
-                //     break;
             }
         }
 
@@ -77,8 +78,8 @@ namespace MiniGames
             enemy1.BringToFront();
             enemy2.BringToFront();
             message.Text = "";
-            
-            // Set scores and cheeses Count
+
+            // Sets scores and cheeses Count
             livesCount.Text = Player1Lives.ToString();
             cheesesCount.Text = Score.ToString();
             
@@ -94,7 +95,7 @@ namespace MiniGames
                 }
             }
 
-            // Make characters move
+            // Makes characters move
             player1.Top += Player1Speed;
             
             if (Player1IsLeft && player1.Left > 0)
@@ -113,67 +114,74 @@ namespace MiniGames
                 Force--;
             }
             
+            // Interactions with other blocs
             foreach (Control control in this.Controls)
             {
-                if (control.Tag == "bloc" && player1.Bounds.IntersectsWith(control.Bounds))
+                if (player1.Bounds.IntersectsWith(control.Bounds))
                 {
-                    int[] values =
+                    // PLATFORM BLOCS
+                    if (control.Tag == "bloc")
                     {
-                        player1.Bottom - control.Top,
-                        player1.Right - control.Left,
-                        control.Bottom - player1.Top,
-                        control.Right - player1.Left
-                    };
-
-                    int index = values.Min();
-                    
-                    switch (Array.IndexOf(values, index))
-                    {
-                        case 0 :
-                            player1.Top = control.Top - player1.Height;
-                            Force = 0;
-                            Player1IsJumping = false;
-                            break;
-                        case 1 :
-                            player1.Left = control.Left - player1.Width;
-                            break;
-                        case 2 :
-                            player1.Top = control.Bottom;
-                            break;
-                        case 3 :
-                            player1.Left = control.Right;
-                            break;
+                        int[] values =
+                        {
+                            player1.Bottom - control.Top,
+                            player1.Right - control.Left,
+                            control.Bottom - player1.Top,
+                            control.Right - player1.Left
+                        };
+    
+                        int index = values.Min();
+                        
+                        switch (Array.IndexOf(values, index))
+                        {
+                            case 0 :
+                                player1.Top = control.Top - player1.Height;
+                                Force = 0;
+                                Player1IsJumping = false;
+                                if (control == blocSpecial1)
+                                {
+                                    Player1IsOnSpecial = true;
+                                }
+                                else
+                                {
+                                    Player1IsOnSpecial = false;
+                                }
+                                break;
+                            case 1 :
+                                player1.Left = control.Left - player1.Width;
+                                break;
+                            case 2 :
+                                player1.Top = control.Bottom;
+                                break;
+                            case 3 :
+                                player1.Left = control.Right;
+                                break;
+                        }
                     }
                     
-                    // Touching control Top side
-                    // if (player1.Bottom >= control.Top &&  player1.Top < control.Top && player1.Left > control.Left - player1.Width && player1.Right < control.Right + player1.Width)
-                    // {
-                    //     player1.Top = control.Top - player1.Height;
-                    //     Force = 0;
-                    //     Player1IsJumping = false;
-                    // }
-                    //
-                    // // Touching control Bottom side
-                    // if (player1.Top <= control.Bottom && player1.Bottom > control.Bottom && player1.Left > control.Left - player1.Width && player1.Right < control.Right + player1.Width)
-                    // {
-                    //     player1.Top = control.Bottom;
-                    // }
-                    //
-                    // // Touching control Right side
-                    // if (player1.Left <= control.Right && player1.Right > control.Right && player1.Top > control.Top - player1.Height && player1.Bottom < control.Bottom + player1.Height)
-                    // {
-                    //     player1.Left = control.Right;
-                    // }
-                    //
-                    // // Touching control Left side
-                    // if (player1.Right >= control.Left && player1.Left < control.Left && player1.Top > control.Top - player1.Height && player1.Bottom < control.Bottom + player1.Height)
-                    // {
-                    //     player1.Left = control.Left - player1.Width;
-                    // }
+                    // ENEMIES
+                    if (control.Tag == "enemy" && !IsTouchingEnemies)
+                    {
+                         EnemiesTimer = 0;
+                         IsTouchingEnemies = true;
+                         disableEnemies(enemy1);
+                         disableEnemies(enemy2);
+                         Player1Lives--;
+                    }
+                    
+                    // CHEESES
+                    if (control.Tag == "cheese")
+                    {
+                        this.Controls.Remove(control);
+                        Score++;
+                    }
+                    
+                    // SPECIAL PLATFORM
                 }
+
             }
             
-            // Make enemies move
+            // Makes enemies move
             if (!IsTouchingEnemies)
             {
                 enemy1.Left += Enemy1Speed;
@@ -189,46 +197,46 @@ namespace MiniGames
                 }
             }
             
-            // Hit enemies
-            foreach (Control control in this.Controls)
+            // Makes platform move
+            blocMoving1.Top += Bloc1Speed;
+            if (blocMoving1.Top <= 150 || blocMoving1.Bottom >= 310)
             {
-                if (control.Tag == "enemy")
+                Bloc1Speed = -Bloc1Speed;
+            }
+
+            blocMoving2.Top += Bloc2Speed;
+            if (blocMoving2.Top <= 296 || blocMoving2.Bottom >= 425)
+            {
+                Bloc2Speed = -Bloc2Speed;
+            }
+
+            if (Player1IsOnSpecial)
+            {
+                blocSpecial1.Left += BlocSpecialSpeed;
+                if (blocSpecial1.Left >= 720)
                 {
-                    if (player1.Bounds.IntersectsWith(control.Bounds) && !IsTouchingEnemies)
-                    {
-                        EnemiesTimer = 0;
-                        IsTouchingEnemies = true;
-                        disableEnemies(enemy1);
-                        disableEnemies(enemy2);
-                        Player1Lives--;
-                    }
-                }
-                
-                // Grab cheeses
-                if (control.Tag == "cheese")
-                {
-                    if (player1.Bounds.IntersectsWith(control.Bounds))
-                    {
-                        this.Controls.Remove(control);
-                        Score++;
-                    }
+                    BlocSpecialSpeed = 0;
                 }
             }
-            
+            else
+            {
+                if (blocSpecial1.Left >= 443)
+                {
+                    blocSpecial1.Left -= BlocSpecialSpeed;
+                }
+            }
 
-            // Check lose
+            // Checks lose
             if (Player1Lives == 0 || player1.Bottom == this.ClientSize.Height)
             {
-                label1.Text = "Lose";
                 // End game with lose
             } 
             
-            // Check win
+            // Checks win
             if (player1.Bounds.IntersectsWith(exitDoor.Bounds))
             {
                 if (Score == 9)
                 {
-                    label1.Text = "Win";
                     // End game with win
                 }
                 else
