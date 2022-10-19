@@ -10,21 +10,21 @@ namespace MiniGames
 {
     public partial class PlatRat : Form
     {
-        private bool Player1IsLeft, Player1IsRight, Player1IsJumping, IsTouchingEnemies, Player1IsOnSpecial;
-        private int Player1Speed = 5;
-        private int Player1JumpSpeed = 17;
-        private int Force;
-        private int Player1Lives = 2;
+        private bool player1IsLeft, player1IsRight, player1IsJumping, isTouchingEnemies, player1IsOnSpecial;
+        private int player1Speed = 5;
+        private int player1JumpSpeed = 17;
+        private int force;
+        private int player1Lives = 3;
 
-        private int Enemy1Speed = 3;
-        private int Enemy2Speed = 4;
-        private int EnemiesTimer = 0;
+        private int enemy1Speed = 2;
+        private int enemy2Speed = 3;
+        private int enemiesTimer = 0;
 
-        private int Bloc1Speed = 2;
-        private int Bloc2Speed = 2;
-        private int BlocSpecialSpeed = 2;
+        private int bloc1Speed = 2;
+        private int bloc2Speed = 2;
+        private int blocSpecialSpeed = 1;
 
-        private int Score;
+        private int score;
 
         public PlatRat()
         {
@@ -42,18 +42,18 @@ namespace MiniGames
             switch (e.KeyCode)
             {
                 case Keys.Right :
-                    Player1IsRight = true;
+                    player1IsRight = true;
                     player1.Image = Properties.Resources.ratBrown;
                     break;
                 case Keys.Left :
-                    Player1IsLeft = true;
+                    player1IsLeft = true;
                     player1.Image = Properties.Resources.ratBrownReverse;
                     break;
                 case Keys.Up :
-                    if (!Player1IsJumping)
+                    if (!player1IsJumping)
                     {
-                        Player1IsJumping = true;
-                        Force = Player1JumpSpeed;
+                        player1IsJumping = true;
+                        force = player1JumpSpeed;
                     }
                     break;
             }
@@ -64,10 +64,10 @@ namespace MiniGames
             switch (e.KeyCode)
             {
                 case Keys.Right :
-                    Player1IsRight = false;
+                    player1IsRight = false;
                     break;
                 case Keys.Left :
-                    Player1IsLeft = false;
+                    player1IsLeft = false;
                     break;
             }
         }
@@ -80,38 +80,38 @@ namespace MiniGames
             message.Text = "";
 
             // Sets scores and cheeses Count
-            livesCount.Text = Player1Lives.ToString();
-            cheesesCount.Text = Score.ToString();
+            livesCount.Text = player1Lives.ToString();
+            cheesesCount.Text = score.ToString();
             
             // Checks if player touched enemies
-            if (IsTouchingEnemies)
+            if (isTouchingEnemies)
             {
-                EnemiesTimer += 10;
-                if (EnemiesTimer >= 700)
+                enemiesTimer += 10;
+                if (enemiesTimer >= 700)
                 {
                     enableEnemies(enemy1);
                     enableEnemies(enemy2);
-                    IsTouchingEnemies = false;
+                    isTouchingEnemies = false;
                 }
             }
 
             // Makes characters move
-            player1.Top += Player1Speed;
+            player1.Top += player1Speed;
             
-            if (Player1IsLeft && player1.Left > 0)
+            if (player1IsLeft && player1.Left > 0)
             {
-                player1.Left -= Player1Speed;
+                player1.Left -= player1Speed;
             }
 
-            if (Player1IsRight && player1.Right < ClientSize.Width)
+            if (player1IsRight && player1.Right < ClientSize.Width)
             {
-                player1.Left += Player1Speed;
+                player1.Left += player1Speed;
             }
 
-            if (Player1IsJumping)
+            if (player1IsJumping)
             {
-                player1.Top -= Force;
-                Force--;
+                player1.Top -= force;
+                force--;
             }
             
             // Interactions with other blocs
@@ -136,16 +136,9 @@ namespace MiniGames
                         {
                             case 0 :
                                 player1.Top = control.Top - player1.Height;
-                                Force = 0;
-                                Player1IsJumping = false;
-                                if (control == blocSpecial1)
-                                {
-                                    Player1IsOnSpecial = true;
-                                }
-                                else
-                                {
-                                    Player1IsOnSpecial = false;
-                                }
+                                force = 0;
+                                player1IsJumping = false;
+                                player1IsOnSpecial = control == blocSpecial1;
                                 break;
                             case 1 :
                                 player1.Left = control.Left - player1.Width;
@@ -160,74 +153,63 @@ namespace MiniGames
                     }
                     
                     // ENEMIES
-                    if (control.Tag == "enemy" && !IsTouchingEnemies)
+                    if (control.Tag == "enemy" && !isTouchingEnemies)
                     {
-                         EnemiesTimer = 0;
-                         IsTouchingEnemies = true;
+                         enemiesTimer = 0;
+                         isTouchingEnemies = true;
                          disableEnemies(enemy1);
                          disableEnemies(enemy2);
-                         Player1Lives--;
+                         player1Lives--;
                     }
                     
                     // CHEESES
                     if (control.Tag == "cheese")
                     {
                         this.Controls.Remove(control);
-                        Score++;
+                        score++;
                     }
-                    
-                    // SPECIAL PLATFORM
                 }
 
             }
             
             // Makes enemies move
-            if (!IsTouchingEnemies)
+            if (!isTouchingEnemies)
             {
-                enemy1.Left += Enemy1Speed;
+                enemy1.Left += enemy1Speed;
                 if (enemy1.Right >= blocSimple6.Right || enemy1.Left <= blocSimple5.Left)
                 {
-                    Enemy1Speed = -Enemy1Speed;
+                    enemy1Speed = -enemy1Speed;
                 }
 
-                enemy2.Left += Enemy2Speed;
+                enemy2.Left += enemy2Speed;
                 if (enemy2.Right >= blocThin2.Right || enemy2.Left <= blocSimple3.Left)
                 {
-                    Enemy2Speed = -Enemy2Speed;
+                    enemy2Speed = -enemy2Speed;
                 }
             }
             
             // Makes platform move
-            blocMoving1.Top += Bloc1Speed;
-            if (blocMoving1.Top <= 140 || blocMoving1.Bottom >= 310)
-            {
-                Bloc1Speed = -Bloc1Speed;
-            }
+            blocMoving1.Top += bloc1Speed;
+            if (blocMoving1.Top <= 140 || blocMoving1.Bottom >= 310) bloc1Speed = -bloc1Speed;
 
-            blocMoving2.Top += Bloc2Speed;
-            if (blocMoving2.Top <= 290 || blocMoving2.Bottom >= 425)
-            {
-                Bloc2Speed = -Bloc2Speed;
-            }
+                blocMoving2.Top += bloc2Speed;
+            if (blocMoving2.Top <= 290 || blocMoving2.Bottom >= 435) bloc2Speed = -bloc2Speed;
 
-            if (Player1IsOnSpecial)
+            if (player1IsOnSpecial)
             {
-                blocSpecial1.Left += BlocSpecialSpeed;
-                if (blocSpecial1.Left >= 720)
-                {
-                    BlocSpecialSpeed = 0;
-                }
+                blocSpecial1.Left += blocSpecialSpeed;
+                if (blocSpecial1.Left >= 720) blocSpecialSpeed = 0;
             }
             else
             {
                 if (blocSpecial1.Left >= 443)
                 {
-                    blocSpecial1.Left -= BlocSpecialSpeed;
+                    blocSpecial1.Left -= blocSpecialSpeed;
                 }
             }
 
             // Checks lose
-            if (Player1Lives == 0 || player1.Bottom == this.ClientSize.Height)
+            if (player1Lives == 0 || player1.Bottom == this.ClientSize.Height)
             {
                 // End game with lose
             } 
@@ -235,7 +217,7 @@ namespace MiniGames
             // Checks win
             if (player1.Bounds.IntersectsWith(exitDoor.Bounds))
             {
-                if (Score == 9)
+                if (score == 9)
                 {
                     // End game with win
                 }
