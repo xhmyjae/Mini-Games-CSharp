@@ -173,7 +173,7 @@ namespace MiniGames
             // 
             this.blocSimple5.BackColor = System.Drawing.Color.Transparent;
             this.blocSimple5.Image = global::MiniGames.Properties.Resources.pipe;
-            this.blocSimple5.Location = new System.Drawing.Point(290, 246);
+            this.blocSimple5.Location = new System.Drawing.Point(290, 266);
             this.blocSimple5.Name = "blocSimple5";
             this.blocSimple5.Size = new System.Drawing.Size(80, 80);
             this.blocSimple5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,7 +185,7 @@ namespace MiniGames
             // 
             this.blocSimple6.BackColor = System.Drawing.Color.Transparent;
             this.blocSimple6.Image = global::MiniGames.Properties.Resources.pipe;
-            this.blocSimple6.Location = new System.Drawing.Point(367, 246);
+            this.blocSimple6.Location = new System.Drawing.Point(367, 266);
             this.blocSimple6.Name = "blocSimple6";
             this.blocSimple6.Size = new System.Drawing.Size(80, 80);
             this.blocSimple6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -339,7 +339,7 @@ namespace MiniGames
             // 
             this.enemy1.BackColor = System.Drawing.Color.Transparent;
             this.enemy1.Image = global::MiniGames.Properties.Resources._542_5427076_colors_download_settings_cat_pixel_art;
-            this.enemy1.Location = new System.Drawing.Point(376, 196);
+            this.enemy1.Location = new System.Drawing.Point(376, 216);
             this.enemy1.Name = "enemy1";
             this.enemy1.Size = new System.Drawing.Size(50, 50);
             this.enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -455,7 +455,7 @@ namespace MiniGames
             // 
             this.cheese3.BackColor = System.Drawing.Color.Transparent;
             this.cheese3.Image = global::MiniGames.Properties.Resources._200_2009833_swiss_cheese_slice_pixel_art_swiss_cheese_pixel_art;
-            this.cheese3.Location = new System.Drawing.Point(326, 206);
+            this.cheese3.Location = new System.Drawing.Point(317, 226);
             this.cheese3.Name = "cheese3";
             this.cheese3.Size = new System.Drawing.Size(34, 34);
             this.cheese3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
