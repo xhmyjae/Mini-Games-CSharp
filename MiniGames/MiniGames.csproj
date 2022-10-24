@@ -52,12 +52,6 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
-        <Compile Include="Platformer.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Platformer.Designer.cs">
-          <DependentUpon>Platformer.cs</DependentUpon>
-        </Compile>
         <Compile Include="PlatRat.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -75,9 +69,6 @@
         <Compile Include="Utils.cs" />
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Platformer.resx">
-          <DependentUpon>Platformer.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="PlatRat.resx">
           <DependentUpon>PlatRat.cs</DependentUpon>

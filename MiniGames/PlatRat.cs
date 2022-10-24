@@ -10,7 +10,7 @@ namespace MiniGames
 {
     public partial class PlatRat : Form
     {
-        private bool player1IsLeft, player1IsRight, player1IsJumping, isTouchingEnemies, player1IsOnSpecial;
+        private bool player1IsLeft, player1IsRight, player1IsJumping, isTouchingEnemies, player1IsOnSpecial, player1IsOnGround;
         private int player1Speed = 5;
         private int player1JumpSpeed = 17;
         private int force;
@@ -50,9 +50,10 @@ namespace MiniGames
                     player1.Image = Properties.Resources.ratBrownReverse;
                     break;
                 case Keys.Up :
-                    if (!player1IsJumping)
+                    if (!player1IsJumping && player1IsOnGround)
                     {
                         player1IsJumping = true;
+                        player1IsOnGround = false;
                         force = player1JumpSpeed;
                     }
                     break;
@@ -74,6 +75,7 @@ namespace MiniGames
 
         private void timerGame_Elapsed(object sender, ElapsedEventArgs e)
         {
+            player1IsOnGround = false;
             player1.BringToFront();
             enemy1.BringToFront();
             enemy2.BringToFront();
@@ -138,6 +140,7 @@ namespace MiniGames
                                 player1.Top = control.Top - player1.Height;
                                 force = 0;
                                 player1IsJumping = false;
+                                player1IsOnGround = true;
                                 player1IsOnSpecial = control == blocSpecial1;
                                 break;
                             case 1 :
